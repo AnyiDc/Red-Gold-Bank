@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedGold Bank</title>
+    <link rel="stylesheet" href="/views/CSS/index.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <img src="/views/IMG/Logo/Logo.png" alt="RedGoldBank-LOGO">
+        <nav>
+            <ul class="menu-Ul">
+                <li class="elementos"><a href="/views/Public/Pages/personas.html">Personas</a></li>
+                <li class="elementos"><a href="/views/Public/Pages/creditos.html">Prestamos RG</a></li>
+                <li class="elementos"><a href="/views/Public/Pages/beneficios.html">Beneficios</a></li>
+                <li class="elementos"><a href="">Nosotros</a></li>
+
+                <li class="nav-Derecha"><a class="destacado" href="/views/Public/Pages/login.html">Acceso</a></li>
+                <li class="elementos"><a href="/views/Public/Pages/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenidoCentral">
+        <section class="info">
+            <h2>Realia tus sueños con los <br>Prestamos RG </h2>
+            <p>Accede ahora a nuestra sección de Préstamos RG y descubre cómo podemos brindarte Una Oportunidad Para
+                Cada Uno. ¡Solicita tu préstamo hoy mismo y da el primer paso hacia el éxito!</p>
+            <button> <a href="/views/Public/Pages/login.html">Solicitar</a></button>
+        </section>
+        <div class="contImg">
+            <img src="/views/IMG/Personas/CP.jpg" alt="Persona_1">
+        </div>
+    </main>
+    <article class="infoPrestamos">
+        <h3>Encuentra el préstamo en Red Gold Bank que mejor se ajuste a tus necesidades
+            Explora los beneficios y la cobertura de los distintos tipos de créditos que Red Gold Bank tiene para ti.
+        </h3>
+        <ol>
+            <li>Conoce los créditos de consumo de corto y mediano plazo para financiar esas compras que siempre has
+                deseado.
+            </li>
+            <li>Construye tu futuro con Red Gold Bank: te ofrecemos financiamiento para tus estudios, con condiciones
+                flexibles.
+            </li>
+            <li>Financia el vehículo de tus sueños, ya sea nuevo o usado, con nuestras opciones de préstamos
+                automotrices.
+            </li>
+            <li>Haz realidad el sueño de tu casa propia con los préstamos hipotecarios que te ofrece Red Gold Bank.
+            </li>
+            <li>Aprovecha convenios exclusivos y beneficios adicionales con los créditos de Red Gold Bank.</li>
+        </ol>
+        <img src="/views/IMG/Personas/HombreRojo.png" alt="PersonaReferencia">
+    </article>
+    <section class="preguntasFrecuentes">
+        <h1>Preguntas Frecuentes</h1>
+        <div class="faq-Container">
+            <div class="faq-Item">
+                <div class="faq-Question">
+                    <h3>¿Cómo puedo registrarme?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-Answer">
+                    <p>Puedes registrarte haciendo clic en el botón "Registrarse" en la parte superior de la página y
+                        completando el formulario.</p>
+                </div>
+            </div>
+
+            <div class="faq-Item">
+                <div class="faq-Question">
+                    <h3>¿Qué métodos de pago aceptan?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-Answer">
+                    <p>Aceptamos pagos con tarjeta y transferencia</p>
+                </div>
+            </div>
+
+            <div class="faq-Item">
+                <div class="faq-Question">
+                    <h3>¿Puedo cancelar mi suscripción?</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-Answer">
+                    <p>Sí, puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const faqItems = document.querySelectorAll('.faq-Item');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const icon = item.querySelector('.icon');
+                    icon.textContent = item.classList.contains('active') ? '-' : '+';
+                });
+            });
+        </script>
+    </section>
+
+
+    <section class="sobreN">
+        <header class="cabezaSobren"></header>
+        <main class="mainSobreN">
+            <div class="section-ItemSobreN">
+                <div class="contTarjeta">
+                    <section class="tarjeta">
+                        <img class="" src="/views/IMG/Elementos Graficos/11.png" alt="Puntos RG">
+                    </section>
+                </div>
+                <h2>Puntos RG</h2>
+                <p>Acumula puntos y canjéalos por recompensas.</p>
+                <button><a href="/views/Public/Pages/login.html">Saber Más</a></button>
+                <link rel="st" href="/views/CSS/personas.css">
+            </div>
+
+            <div class="section-ItemSobreN">
+                <div class="contTarjeta">
+                    <section class="tarjeta">
+                        <img class="eln2" src="/views/IMG/Elementos Graficos/22.png" alt="Créditos">
+                    </section>
+                </div>
+                <h2>Créditos</h2>
+                <p>Solicita tu crédito ahora.</p>
+                <button><a href="/views/Public/Pages/creditos.html">Solicítalo YA</a></button>
+            </div>
+
+            <div class="section-ItemSobreN">
+                <div class="contTarjeta">
+                    <section class="tarjeta">
+                        <img class="eln3" src="/views/IMG/Elementos Graficos/view-silver-cup-trophy.jpg"
+                            alt="Préstamos Deluxe Gold">
+                    </section>
+                </div>
+                <h2>Préstamos Deluxe Gold</h2>
+                <p>El préstamo premium para tus proyectos.</p>
+                <button> <a href="/views/Public/Pages/beneficios.html">Pídelo</a></button>
+            </div>
+        </main>
+    </section>
+
+    <footer class="redesF">
+        <div class="divRedes"> <img class="imgRedes" src="/views/IMG/Logo/email.png" alt="Red1"></div>
+        <div class="divRedes"> <img class="imgRedes" src="/views/IMG/Logo/facebook.png" alt="Red2"></div>
+        <div class="divRedes"> <img class="imgRedes" src="/views/IMG/Logo/instagram.png" alt="Red3"></div>
+        <div class="divRedes"> <img class="imgRedes" src="/views/IMG/Logo/Telefono.png" alt="Red4"></div>
+
+    </footer>
+
+</body>
+
+</html>

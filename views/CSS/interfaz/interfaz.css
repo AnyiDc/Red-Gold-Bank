@@ -1,0 +1,79 @@
+@font-face{
+    font-family:'LetraPrincipal';
+    src: url('/views/Fonts/LetraPrincipal.otf');
+}
+@font-face {
+    font-family:'FuenteLogin';
+    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:'FuenteBoton';
+    src: url('/views/Fonts/Garet-Book.otf');
+}
+@font-face {
+    font-family:'FuenteTexto';
+    src: url('/Public/Fonts/Poppins-Regular.ttf');
+}
+body{
+    margin: 0;
+    padding:0;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+}
+h3{
+    font-family: 'LetraPrincipal';
+    font-size: 50px;
+    color:#b42525;
+    margin-left: 10%;
+}
+h1{
+    margin-left: 10%;
+    font-family: 'FuenteLogin';
+    font-size: 100px;
+}
+
+.tarjeta{
+    width: 30%;
+    border-radius: 20px;
+    height: 600px;
+    border: solid 2px #b42525;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+a{
+    text-decoration: none;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: #b42525;
+    padding: 5%;
+    border: currentColor;
+    border-radius: 50px;
+    width: 300px;
+    height: 90px;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: yellow;
+    color: #b42525;
+    transition: ease 1s;
+    font-size: 30px;
+}
+a:hover{
+    color:#b42525;
+}

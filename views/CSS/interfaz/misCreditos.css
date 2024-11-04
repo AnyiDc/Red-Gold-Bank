@@ -1,0 +1,97 @@
+@font-face{
+    font-family:'LetraPrincipal';
+    src: url('/views/Fonts/LetraPrincipal.otf');
+}
+@font-face {
+    font-family:'FuenteLogin';
+    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:'FuenteBoton';
+    src: url('/views/Fonts/Garet-Book.otf');
+}
+@font-face {
+    font-family:'FuenteTexto';
+    src: url('/views/Fonts/Poppins-Regular.ttf');
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'FuenteTexto', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+header{
+    background-color: #000;
+    width: 100%;
+    height: 120px;
+}
+.creditos-Section {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+h2 {
+    color: #B71C1C;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.title-cell {
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #000;
+    margin-left:5%;
+}
+
+.pago-Link {
+    background-color: #B71C1C;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pago-Link:hover {
+    background-color:gold;
+    color: red;
+}
+footer{
+    background-color: #000;
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+}
+

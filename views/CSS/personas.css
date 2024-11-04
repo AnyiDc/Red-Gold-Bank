@@ -1,0 +1,110 @@
+@font-face{
+    font-family:'LetraPrincipal';
+    src: url('/views/Fonts/LetraPrincipal.otf');
+}
+@font-face {
+    font-family:'FuenteLogin';
+    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:'FuenteBoton';
+    src: url('/views/Fonts/Garet-Book.otf');
+}
+@font-face {
+    font-family:'FuenteTexto';
+    src: url('/views/Fonts/Poppins-Regular.ttf');
+}
+/*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+}
+main{
+    display: flex;
+}
+.divPersonas{
+    width: 50%;
+    padding-top: 70px;
+    padding-left: 100px;
+}
+.sectionPersonas{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    
+}
+form{
+    border: solid black 2px;
+    width: 60%;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-top: 4px;
+    border-radius: 5%;
+}
+input{
+    width: 90%;
+    margin-left: 5px;
+   
+}
+p{
+    font-family: 'FuenteTexto';
+    margin-top: 7px;
+   margin-left: 15px;
+}
+h1{
+    font-family: 'FuenteTexto';
+    color: #b42525;
+}
+h2{
+    font-family: 'FuenteTexto';
+    color: #b42525;
+}
+.PUno{
+    font-family: 'FuenteTexto';
+    margin-left: 0;
+}
+button{
+    font-family:'FuenteBoton';
+    background-color: #b42525;
+    color: #e4c15c;
+    width: 50%;
+    height: 10%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 125px;
+    border: currentColor;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #ff0000;
+    transition: ease-in 0.8s;
+    transform: scale(1.2);
+}
+
+footer{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+}
+img{
+    width: 500px;
+    height: 270px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
