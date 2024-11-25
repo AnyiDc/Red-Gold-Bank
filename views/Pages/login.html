@@ -18,7 +18,7 @@
     </div>
     <div class="box" id="box">
         <div class="form">
-            <form action="" method="get" id="signIn">
+            <form action="" method="get" id="Login">
                 <h2>Iniciar Sesión</h2>
                 <div class="inputBox">
                     <input id = "nombreLogin" type="text" required="required">
@@ -32,10 +32,14 @@
                 </div>
                 <div class="links">
                     <a id ="link_olvide" onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a id ="link_registrarse" onclick="signUp()">Registrarme</a>
+                    <a id ="link_registrarse" onclick="formulario_registro()">Registrarme</a>
                 </div>
            <button name="btn_iniciarsesion" id ="btn_iniciarsesion"> Iniciar </button>
             </form>
+
+    
+
+
             <form action="" id="forgetPassword">
                 <h2>Olvide mi Contraseña</h2>
                 <div class="inputBox">
@@ -51,25 +55,27 @@
             </form>
 
             
-            <form action="" id="signUp">
+
+
+            <form action="" id="formulario_registro">
                 <h2>Registrarme</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class ="inputs_registro" type="text" required="required">
                     <span>Nombre completo</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class ="inputs_registro" type="text" required="required">
                     <span>Documento de identidad</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input class ="inputs_registro"type="email" required="required">
                     <span>Email</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input class ="inputs_registro" type="password" required="required">
                     <span>Contraseña</span>
                     <i></i>
                 </div>
@@ -82,7 +88,7 @@
         </div>
     </div>
     <script   src="/views/Public/JS/scriptLogin.js"></script>
-    <script type="module" scr ="/views/Public/JS/script.js"></script>
+    <script type="model" src="/views/Public/JS/script.js"></script>
 
 </body>
 

@@ -1,30 +1,34 @@
-import expresionesRegulares from "../../../controllers/expresionesRegulares";
-let inputs = document.querySelectorAll("input");
-document.getElementById('btn_iniciarsesion').addEventListener('click', function (e) {
-    e.preventDefault();
-if (inputs[0].value.trim() !=="" && inputs[1].value.trim()!=="")  { 
-    validar_input();
-    console.log("valores ingresado")
-}else if (inputs[0].value.trim()!=="" && inputs[1].value.trim()=="" || inputs[0].value.trim()=="" && inputs[1].value.trim() != "" ) {
-    console.log("hay un campo null");
-    
-} else{
-    console.log("Los valores son nulos")
-   
+function signIn() {
+  // Oculta todos los formularios
+  document.getElementById('Login').classList.remove('active');
+  document.getElementById('forgetPassword').classList.remove('active');
+  document.getElementById('formulario_registro').classList.remove('active');
+  
+  // Muestra el formulario de inicio de sesión
+  document.getElementById('Login').classList.add('active');
 }
-})
 
-function validar_input(e){
-    e.preventDefault();
-  for(var i = 0; i < inputs.length; i){
-    e.preventDefault();
-    if(expresionesRegulares.nombre.test(inputs[i].value)){ 
-      console.log("Error en el campo: " + inputs[i].name);
-      inputs[i].classList.add("error");
-
-    } else {
-      inputs[i].classList.remove("error");
-    }
-  }
-
+function forgetPassword() {
+  // Oculta todos los formularios
+  document.getElementById('Login').classList.remove('active');
+  document.getElementById('forgetPassword').classList.remove('active');
+  document.getElementById('formulario_registro').classList.remove('active');
+  
+  // Muestra el formulario de recuperación de contraseña
+  document.getElementById('forgetPassword').classList.add('active');
 }
+
+function formulario_registro() {
+  // Oculta todos los formularios
+  document.getElementById('Login').classList.remove('active');
+  document.getElementById('forgetPassword').classList.remove('active');
+  document.getElementById('formulario_registro').classList.remove('active');
+  
+  // Muestra el formulario de registro
+  document.getElementById('formulario_registro').classList.add('active');
+}
+
+// Al cargar la página, muestra el formulario de inicio de sesión por defecto
+document.addEventListener('DOMContentLoaded', (event) => {
+  formulario_registro();
+});
