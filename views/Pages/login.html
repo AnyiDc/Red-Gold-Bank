@@ -43,7 +43,7 @@
             <form action="" id="forgetPassword">
                 <h2>Olvide mi Contraseña</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class = "inputForget" type="text" required="required">
                     <span>Numero de cedula:</span>
                     <i></i>
                 </div>
@@ -51,7 +51,7 @@
                     <a onclick="signIn()" href="">Iniciar Sesion</a>
                     <a onclick="signUp()" href="">Registrarme </a>
                 </div>
-               <button > Iniciar Sesion</button>
+                <button name="btn_forgetPassword" id ="btn_forgetPassword"> Recuperar clave </button>
             </form>
 
             
@@ -81,9 +81,10 @@
                 </div>
                 <div class="links">
                     <a onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a onclick="signIn()">Registrarme</a>
+                    <a onclick="formulario_registro()">Registrarme</a>
                 </div>
-                <input type="submit" value="registrarme">
+                
+                <button name="btn_registrarme" id ="btn_registrarme"> Registrarme </button>
             </form>
         </div>
     </div>
