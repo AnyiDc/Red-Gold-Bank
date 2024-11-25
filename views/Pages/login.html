@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/CSS/login.css">
+    <link rel="stylesheet" href="/views/Public/css/login.css">
     <title>Iniciar Seccion</title>
 </head>
 
 <body>
-<section>
+
     <div class="contP">
-        <img src="/views/IMG/Logo/Logo" alt="RedGoldBankLogo">
+        <img src="/views/Public/img/Logo.png" alt="RedGoldBankLogo">
             <p>En Red Gold Bank, tu seguridad es nuestra prioridad.
             Nos comprometemos a proteger tus datos con los más altos estándares de seguridad en nuestra plataforma web. Utilizamos tecnología avanzada de encriptación y protocolos de seguridad para asegurarnos de que toda tu información personal y financiera esté completamente protegida en todo momento.</p>
     </div>
     <div class="box" id="box">
         <div class="form">
-            <form action="/views/Public/Pages/userInterfaz/interfaz.html" method="get" id="signIn">
-                <h2>Iniciar Seccion</h2>
+            <form action="" method="get" id="signIn">
+                <h2>Iniciar Sesión</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input id = "nombreLogin" type="text" required="required">
                     <span>Nombre Completo</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input id="contraseniaLogin" type="password" required="required">
                     <span>Contraseña</span>
                     <i></i>
                 </div>
                 <div class="links">
-                    <a onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a onclick="signUp()">Registrarme</a>
+                    <a id ="link_olvide" onclick="forgetPassword()">Olvide mi Contraseña</a>
+                    <a id ="link_registrarse" onclick="signUp()">Registrarme</a>
                 </div>
-            <input type="submit" value="Iniciar">
+           <button name="btn_iniciarsesion" id ="btn_iniciarsesion"> Iniciar </button>
             </form>
             <form action="" id="forgetPassword">
                 <h2>Olvide mi Contraseña</h2>
@@ -44,11 +44,13 @@
                     <i></i>
                 </div>
                 <div class="links">
-                    <a onclick="signIn()" href="/views/Public/Pages/userInterfaz/interfaz.html">Iniciar Seccion</a>
-                    <a onclick="signUp()">Registrarme</a>
+                    <a onclick="signIn()" href="">Iniciar Sesion</a>
+                    <a onclick="signUp()" href="">Registrarme </a>
                 </div>
-                <input type="submit" value="restablecer">
+               <button > Iniciar Sesion</button>
             </form>
+
+            
             <form action="" id="signUp">
                 <h2>Registrarme</h2>
                 <div class="inputBox">
@@ -79,8 +81,9 @@
             </form>
         </div>
     </div>
-    <script src="../JS/scriptLogin.js"></script>
-</section>
+    <script   src="/views/Public/JS/scriptLogin.js"></script>
+    <script type="module" scr ="/views/Public/JS/script.js"></script>
+
 </body>
 
 </html>
