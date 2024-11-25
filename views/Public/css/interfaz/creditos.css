@@ -1,0 +1,122 @@
+@font-face{
+    font-family:'LetraPrincipal';
+src: url('/views/Fonts/LetraPrincipal.otf');
+}
+@font-face {
+    font-family:'FuenteLogin';
+    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:'FuenteBoton';
+    src: url('/Public/Fonts/Garet-Book.otf');
+}
+@font-face {
+    font-family:'FuenteTexto';
+    src: url('/views/Fonts/Poppins-Regular.ttf');
+}
+/*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+}
+main{
+    display: flex;
+}
+.divCredi{
+    width: 50%;
+    
+    padding-top: 70px;
+    
+    
+    padding-left: 100px;
+}
+.sectionCredi{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    
+}
+form{
+    border: solid black 2px;
+    width: 60%;
+    height: 430px;
+    display: flex;
+    padding-inline: 30px;
+    flex-direction: column;
+    
+}
+label{
+    margin-top: 30px;
+}
+input{
+    width: 90%;
+    margin-left: 5px;
+    
+}
+p{
+    font-family: 'FuenteTexto';
+    margin-top: 7px;
+   margin-left: 15px;
+   position: relative;
+   bottom: 0px;
+   margin-top: 30px;
+}
+h4{
+    font-family: 'FuenteTexto';
+    color: #b42525;
+    position: absolute;
+    top: 150px;
+    left: 600px;
+}
+
+
+button{
+    font-family:'FuenteBoton';
+    background-color: #b42525;
+    color: #e4c15c;
+    width: 50%;
+    height: 10%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 110px;
+    position: relative;
+    top: 110px;
+}
+.pCredi{
+    margin-top: 30px;
+    margin-left: 15px   ;
+    position: absolute;
+    top:160px;
+    left: 580px  ;
+    right: 50px;
+    
+    
+}
+
+
+footer{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+}
+img{
+    width: 500px;
+    height: 270px;
+    margin-top: 30px;
+    margin-left: 40px;
+    position: absolute;
+    top: 240px;
+    left: 700px;
+}       
