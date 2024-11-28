@@ -12,7 +12,7 @@
 <body>
 
     <header class="cabecera">
-        <a href="/index.html"> <!-- Aquí se agrega el enlace -->
+        <a href="/index.html">
             <img src="/views/Public/img/Logo.png" alt="RedGoldBank-LOGO">
         </a>
         <nav>
@@ -29,82 +29,90 @@
 
     <div class="contP">
         <img src="/views/Public/img/Logo.png" alt="RedGoldBankLogo">
-            <p>En Red Gold Bank, tu seguridad es nuestra prioridad.
-            Nos comprometemos a proteger tus datos con los más altos estándares de seguridad en nuestra plataforma web. Utilizamos tecnología avanzada de encriptación y protocolos de seguridad para asegurarnos de que toda tu información personal y financiera esté completamente protegida en todo momento.</p>
+        <p>En Red Gold Bank, tu seguridad es nuestra prioridad.
+            Nos comprometemos a proteger tus datos con los más altos estándares de seguridad en nuestra plataforma web.
+            Utilizamos tecnología avanzada de encriptación y protocolos de seguridad para asegurarnos de que toda tu
+            información personal y financiera esté completamente protegida en todo momento.</p>
     </div>
     <div class="box" id="box">
         <div class="form">
-            <form action="" method="get" id="Login">
-                <h2>Iniciar Sesión</h2>
-                <div class="inputBox">
-                    <input id = "nombreLogin" type="text" required="required">
-                    <span>Nombre Completo</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input id="contraseniaLogin" type="password" required="required">
-                    <span>Contraseña</span>
-                    <i></i>
-                </div>
-                <div class="links">
-                    <a id ="link_olvide" onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a id ="link_registrarse" onclick="formulario_registro()">Registrarme</a>
-                </div>
-           <button name="btn_iniciarsesion" id ="btn_iniciarsesion"> Iniciar </button>
-            </form>
-
-    
-
-
-            <form action="" id="forgetPassword">
-                <h2>Olvide mi Contraseña</h2>
-                <div class="inputBox">
-                    <input class = "inputForget" type="text" required="required">
-                    <span>Numero de cedula:</span>
-                    <i></i>
-                </div>
-                <div class="links">
-                    <a onclick="signIn()" href="">Iniciar Sesion</a>
-                    <a onclick="signUp()" href="">Registrarme </a>
-                </div>
-                <button name="btn_forgetPassword" id ="btn_forgetPassword"> Recuperar clave </button>
-            </form>
-
-            
+            <!--Formulario del login-->
+            <div id="Login">
+                <form action="" method="get">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="inputBox">
+                        <input id="nombreLogin" type="text" required="required">
+                        <span>Nombre Completo</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input id="contraseniaLogin" type="password" required="required">
+                        <span>Contraseña</span>
+                        <i></i>
+                        
+                    </div>
+                    <div class="links">
+                        <a id="link_olvide" onclick="showForgetPassword()">Olvide mi Contraseña</a>
+                        <a id="link_registrarse" onclick="showformularioRegistro()">Registrarme</a>
+                    </div>
+                    <button name="btn_iniciarsesion" id="btn_iniciarsesion"> Iniciar </button>
+                </form>
+            </div>
 
 
-            <form action="" id="formulario_registro">
-                <h2>Registrarme</h2>
-                <div class="inputBox">
-                    <input class ="inputs_registro" type="text" required="required">
-                    <span>Nombre completo</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input class ="inputs_registro" type="text" required="required">
-                    <span>Documento de identidad</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input class ="inputs_registro"type="email" required="required">
-                    <span>Email</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input class ="inputs_registro" type="password" required="required">
-                    <span>Contraseña</span>
-                    <i></i>
-                </div>
-                <div class="links">
-                    <a onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a onclick="formulario_registro()">Registrarme</a>
-                </div>
-                
-                <button name="btn_registrarme" id ="btn_registrarme"> Registrarme </button>
-            </form>
+            <!--Formulario de olvide mi contraseña-->
+
+            <div id="forgetPassword">
+                <form action="">
+                    <h2>Ingrese número de documento</h2>
+                    <div class="inputBox">
+                        <input class="inputForget" type="text" required="required">
+                        <span>Numero de cedula:</span>
+                        <i></i>
+                    </div>
+                    <div class="links">
+                        <a id="link_login" onclick="showLogin()">Iniciar Sesión</a>
+                        <a id="link_registrarse" onclick="showformularioRegistro()">Registrarme</a>
+                    </div>
+                    <button name="btn_forgetPassword" id="btn_forgetPassword"> Recuperar clave </button>
+                </form>
+            </div>
+            <!--Formulario de registro-->
+
+            <div id="formulario_registro">
+                <form action="">
+                    <h2>Registrarme</h2>
+                    <div class="inputBox">
+                        <input class="inputs_registro" type="text" required="required">
+                        <span>Nombre completo</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input class="inputs_registro" type="text" required="required">
+                        <span>Documento de identidad</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input class="inputs_registro" type="email" required="required">
+                        <span>Email</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input class="inputs_registro" type="password" required="required">
+                        <span>Contraseña</span>
+                        <i></i>
+                    </div>
+                    <div class="links">
+                        <a id="link_olvide" onclick="showForgetPassword()">Olvide mi Contraseña</a>
+                        <a id="link_login" onclick="showLogin()">Iniciar Sesión</a>
+                    </div>
+
+                    <button name="btn_registrarme" id="btn_registrarme"> Registrarme </button>
+                </form>
+            </div>
         </div>
     </div>
-    <script   src="/views/Public/JS/scriptLogin.js"></script>
+    <script src="/controllers/ControllerLogin.js"></script>
     <script type="model" src="/views/Public/JS/script.js"></script>
 
 </body>
