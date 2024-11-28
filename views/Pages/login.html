@@ -6,10 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/views/Public/css/login.css">
-    <title>Iniciar Seccion</title>
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
+
+    <header class="cabecera">
+        <a href="/index.html"> <!-- Aquí se agrega el enlace -->
+            <img src="/views/Public/img/Logo.png" alt="RedGoldBank-LOGO">
+        </a>
+        <nav>
+            <ul class="menu-Ul">
+                <li class="elementos"><a href="/views/Pages/personas.html">Personas</a></li>
+                <li class="elementos"><a href="/views/Pages/creditos.html">Prestamos RG</a></li>
+                <li class="elementos"><a href="/views/Pages/beneficios.html">Beneficios</a></li>
+                <li class="elementos"><a href="">Nosotros</a></li>
+                <li class="nav-Derecha"><a class="destacado" href="/views/Pages/login.html">Acceso</a></li>
+                <li class="elementos"><a href="/views/Pages/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="contP">
         <img src="/views/Public/img/Logo.png" alt="RedGoldBankLogo">
@@ -18,7 +34,7 @@
     </div>
     <div class="box" id="box">
         <div class="form">
-            <form action="" method="get" id="signIn">
+            <form action="" method="get" id="Login">
                 <h2>Iniciar Sesión</h2>
                 <div class="inputBox">
                     <input id = "nombreLogin" type="text" required="required">
@@ -32,14 +48,18 @@
                 </div>
                 <div class="links">
                     <a id ="link_olvide" onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a id ="link_registrarse" onclick="signUp()">Registrarme</a>
+                    <a id ="link_registrarse" onclick="formulario_registro()">Registrarme</a>
                 </div>
            <button name="btn_iniciarsesion" id ="btn_iniciarsesion"> Iniciar </button>
             </form>
+
+    
+
+
             <form action="" id="forgetPassword">
                 <h2>Olvide mi Contraseña</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class = "inputForget" type="text" required="required">
                     <span>Numero de cedula:</span>
                     <i></i>
                 </div>
@@ -47,42 +67,45 @@
                     <a onclick="signIn()" href="">Iniciar Sesion</a>
                     <a onclick="signUp()" href="">Registrarme </a>
                 </div>
-               <button > Iniciar Sesion</button>
+                <button name="btn_forgetPassword" id ="btn_forgetPassword"> Recuperar clave </button>
             </form>
 
             
-            <form action="" id="signUp">
+
+
+            <form action="" id="formulario_registro">
                 <h2>Registrarme</h2>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class ="inputs_registro" type="text" required="required">
                     <span>Nombre completo</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="text" required="required">
+                    <input class ="inputs_registro" type="text" required="required">
                     <span>Documento de identidad</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input class ="inputs_registro"type="email" required="required">
                     <span>Email</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required">
+                    <input class ="inputs_registro" type="password" required="required">
                     <span>Contraseña</span>
                     <i></i>
                 </div>
                 <div class="links">
                     <a onclick="forgetPassword()">Olvide mi Contraseña</a>
-                    <a onclick="signIn()">Registrarme</a>
+                    <a onclick="formulario_registro()">Registrarme</a>
                 </div>
-                <input type="submit" value="registrarme">
+                
+                <button name="btn_registrarme" id ="btn_registrarme"> Registrarme </button>
             </form>
         </div>
     </div>
     <script   src="/views/Public/JS/scriptLogin.js"></script>
-    <script type="module" scr ="/views/Public/JS/script.js"></script>
+    <script type="model" src="/views/Public/JS/script.js"></script>
 
 </body>
 

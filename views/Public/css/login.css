@@ -7,18 +7,370 @@
   font-family: "Reem Kufi Fun", sans-serif;
 }
 
-body {
-  font-family: "Reem Kufi Fun", sans-serif;
-  /* Fuente general */
-  font-size: clamp(0.8rem, 2vw + 0.5rem, 2rem);
-  /* Tamaño de fuente adaptable */
-  line-height: 1.5;
-  /* Mejora la legibilidad */
-  color: black;
-  /* Color del texto */
-  background-color: rgb(0, 0, 0);
-  /* Fondo */
+@font-face{
+  font-family:'LetraPrincipal';
+  src: url('/views/Fonts/LetraPrincipal.otf');
 }
+@font-face {
+  font-family:'FuenteLogin';
+  src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family:'FuenteBoton';
+  src: url('/views/Fonts/Garet-Book.otf');
+}
+@font-face {
+  font-family:'FuenteTexto';
+  src: url('/views/Fonts/Poppins-Regular.ttf');
+}
+/*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
+
+/*Menu de navegacion*/
+
+.cabecera {
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 50px; 
+  margin: 0; 
+  padding: 0; 
+  z-index: 1000; }
+.cabecera img{
+  width: 280px;
+  max-height: 100px; /* Ajusta un máximo para pantallas pequeñas */
+  transition: all 0.3s ease-in-out; /* Animación suave para cambios de tamaño */
+  margin-left: 40%; /* Centra la imagen en la cabecera */
+ 
+}
+
+
+.cabecera nav{
+ background-color: black;
+ padding: 10px;
+ position: sticky;
+ top: 0px;
+ 
+ 
+ 
+}
+.cabecera ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+.cabecera li{
+  margin-right: 20px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+.cabecera a{
+  color: #b42525;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family:'FuentePrincipal';
+  font-size: 18px;
+  text-align: center;
+
+}
+.elementos::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: transform 0.6s ease-in-out, border-color 0.6s ease-in-out;
+  z-index: -1;
+}
+.elementos:hover::before {
+  border-color: red; 
+  transform: rotate(360deg); 
+}
+.cabecera li:hover a {
+  color: red; /* Cambiar color del texto en hover */
+}
+.nav-Derecha{
+  margin-left: auto;
+}
+.destacado{
+  font-weight: bold;
+}
+.contenidoCentral{
+display:inline;
+
+}
+
+
+.info{
+  display: inline;
+  position:relative;
+  left: 45%;
+}
+
+.contImg img{
+  position:absolute;
+  bottom: 0%;
+  left: 3%;
+  max-width:500px;
+  max-height: 500px;
+  z-index: -1;
+}
+.info h2{
+  font-family: 'FuenteLogin';
+  color: #b42525;
+  font-size: 40px;
+}
+.info p{
+  text-align: justify;
+  font-size: 30px;
+  width: 700px;
+}
+.info button{
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color:#e4c15c;
+  background: linear-gradient(90deg, #ad1010 50%, #ff0303 50%);
+  background-size: 200%;
+  background-position: 0%;
+  border: 1px solid red;
+  cursor: pointer;
+  transition: background-position 0.5s ease-in-out;
+  outline: none;
+}
+.info button:hover{
+   background-position: 100%;
+   color: yellow;
+}
+.info a{
+  text-decoration: none;
+  color: #e4c15c;
+}
+.info a:hover{
+  color: yellow;
+}
+
+.infoPrestamos{
+  background-color:#ad1010;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 100%;
+  display: block;
+}
+.infoPrestamos h3{
+  padding: 5%;
+  font-family: 'FuenteLogin';
+  background: linear-gradient(Gold  40%, white  50%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 35px;
+}
+.infoPrestamos li{
+  list-style: outside;
+  margin-left: 10%;
+  padding: 0.5%;
+  font-size: 25px;
+  font-family: 'FuenteTexto';
+}
+.infoPrestamos ol{
+  position: absolute;
+  top: 30%;
+}
+.infoPrestamos img{
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 320px;
+  height: 60%;
+}
+.preguntasFrecuentes{
+  position: absolute;
+  top: 165%;
+  margin-left: 20%;
+  font-family: 'FuenteTexto';
+}
+.faq-Section {
+  height: 400px;
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-Section h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  margin-left: 5000px;
+}
+
+.faq-Container {
+  border-top: 2px solid #f4f4f4;
+  margin-top: 10%;
+}
+
+.faq-Item {
+  margin: 10px 0;
+  border-bottom: 2px solid #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-Question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-Question h3 {
+  color: #333;
+  font-size: 18px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #ff0000;
+  transition: transform 0.3s ease;
+}
+
+.faq-Answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  color: #ff0000;
+  font-size: 16px;
+}
+
+.faq-Item.active .faq-answer {
+  max-height: 100px;
+  padding-top: 10px;
+}
+
+.faq-Item.active .icon {
+  transform: rotate(45deg);
+}
+
+.sobreN{
+  font-family: 'FuenteTexto';
+  font-size: 14px;
+  width: 100%;
+  height: auto;
+  background-color: gold;
+  display: flex;
+  position: absolute;
+  top: 240%;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mainSobreN{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cabezaSobreN{
+  background-color: black;
+  width: 100%;
+  height: 100px;
+}
+.section-ItemSobreN {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-ItemSobreN img {
+
+  background-color: white;
+  height: 130px;
+  width: 200px;
+  max-width: 100%;
+  
+
+}
+
+
+.section-ItemSobreN button {
+  border: currentColor;
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  font-family: 'FuenteTexto';
+  font-size: 14px;
+}
+.section-ItemSobreN button:hover{
+  background-color: red;
+  transition: ease 0.45s;
+  color: gold;
+}
+.section-ItemSobreN a{
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+}
+.conTarjeta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  
+}
+.tarjeta {
+      position: absolute;
+      left: -18%;
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-left: 10%;
+      margin-left: 100px;
+  }
+.tarjeta img{
+  width: 100%;
+  height: 100%;
+
+}
+.RedesF{
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  position: absolute;
+  top: 281%;
+  display: flex;
+}
+
+.divRedes{
+  width: 20%;
+  height: 60%;
+  background-color: #b42525;
+  border-radius: 30px;
+  margin-top: 2%;
+  margin-left: 4%;
+}
+
+.ImgRedes{
+  width: 35%;
+  height: 90%;
+  margin-left: 33%;
+  margin-top: 1%;
+}
+
+
 
 /* Títulos */
 h1 {
@@ -73,7 +425,7 @@ a:hover {
   .contP {
     width: 80%;
     height: auto;
-    top: 5%;
+    top: 7%;
     left: 10%;
     padding: 20px;
   }
@@ -131,7 +483,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
@@ -139,13 +491,12 @@ body {
 
 .contP {
   position: absolute;
-  top: 10vh;
-  left: 15vw;
-
+  top: 30vh;
+  left: 23vw;
   background-color: white;
   box-shadow: 0.1rem 0.1rem 1rem red;
-  height: 75vh;
-  width: 67vw;
+  height: 65vh;
+  width: 57vw;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -172,9 +523,9 @@ body {
 
 .box {
   position: absolute;
-  width: 29vw;
-  left: 17.7%;
-  top: 18vh;
+  width: 25vw;
+  left: 24%;
+  top: 34vh;
   height: 58vh;
   background: var(--secondColor);
   transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -216,6 +567,7 @@ body {
 
 /*form que contiene el divbox de los inputs*/
 .form {
+  
   background-color: #ffffff;
   position: absolute;
   margin-left: 0.2rem;
@@ -226,7 +578,7 @@ body {
   padding: 5vh 4vw;
   display: flex;
   right: 1%;
-
+  
 }
 
 h1 {
@@ -379,22 +731,22 @@ h1 {
 }
 
 #signIn {
-  position: absolute;
-  top: 45px;
+  display: none !important;
   transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-#signUp {
+#formulario_registro{
   display: none !important;
-  position: absolute;
-  top: 450px;
-  display: block;
+  position: relative;
+background-color: rgb(235, 155, 51);
+ width: 70%;
+ height: 50%;
   transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 #forgetPassword {
   display: none !important;
-  position: absolute;
+  position: relative;
   top: -40%;
   /* Ajusta este porcentaje según la altura del contenedor */
 
