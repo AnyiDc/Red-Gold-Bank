@@ -20,11 +20,14 @@ body{
     padding: 0px;
     
 }
+
+
 /*Menu de navegacion*/
-.cabecera img{
-    width: 500px;
-    height: 150px;
-    margin-left: 30%;
+.cabecera img{   
+  width: 280px;
+  max-height: 100px;
+  transition: all 0.3s ease-in-out; 
+  margin-left: 40%; 
 }
 .cabecera nav{
    background-color: black;
@@ -65,8 +68,8 @@ body{
     z-index: -1;
 }
 .elementos:hover::before {
-    border-color: red; /* Color del borde al hacer hover */
-    transform: rotate(360deg); /* Rotación completa */
+    border-color: red; 
+    transform: rotate(360deg); 
 }
 .cabecera li:hover a {
     color: red; /* Cambiar color del texto en hover */
