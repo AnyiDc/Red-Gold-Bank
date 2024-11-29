@@ -41,6 +41,7 @@ function validar(e) {
                 console.log("Nombre válido")
             }else{
                 console.log("Nombre inválido")
+                
             }
             break;
 
