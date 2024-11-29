@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+import * aslang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -41,15 +41,15 @@
                 <form action="" method="get">
                     <h2>Iniciar Sesión</h2>
                     <div class="inputBox">
-                        <input id="nombreLogin" type="text" required="required">
+                        <input id="nombreLogin" name="nombreLogin" type="text" required="required">
                         <span>Nombre Completo</span>
                         <i></i>
                     </div>
                     <div class="inputBox">
-                        <input id="contraseniaLogin" type="password" required="required">
+                        <input id="contraseniaLogin" name="contraseniaLogin" type="password" required="required">
                         <span>Contraseña</span>
                         <i></i>
-                        
+
                     </div>
                     <div class="links">
                         <a id="link_olvide" onclick="showForgetPassword()">Olvide mi Contraseña</a>
@@ -66,7 +66,8 @@
                 <form action="">
                     <h2>Ingrese número de documento</h2>
                     <div class="inputBox">
-                        <input class="inputForget" type="text" required="required">
+                        <input class="inputForget" name="recuperarclave" id="recuperarclave" type="text"
+                            required="required">
                         <span>Numero de cedula:</span>
                         <i></i>
                     </div>
@@ -83,22 +84,22 @@
                 <form action="">
                     <h2>Registrarme</h2>
                     <div class="inputBox">
-                        <input class="inputs_registro" type="text" required="required">
+                        <input class="inputs_registro" name="registroNombre" type="text" required="required">
                         <span>Nombre completo</span>
                         <i></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" type="text" required="required">
+                        <input class="inputs_registro" name="registroDocumento" type="text" required="required">
                         <span>Documento de identidad</span>
                         <i></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" type="email" required="required">
+                        <input class="inputs_registro" name="registroEmail" type="email" required="required">
                         <span>Email</span>
                         <i></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" type="password" required="required">
+                        <input class="inputs_registro" name="registroClave" type="password" required="required">
                         <span>Contraseña</span>
                         <i></i>
                     </div>
@@ -112,9 +113,9 @@
             </div>
         </div>
     </div>
-    <script src="/controllers/ControllerLogin.js"></script>
-    <script type="model" src="/views/Public/JS/script.js"></script>
 
+    <script type="module" src="/views/Public/JS/scriptLogin.js"></script>
+    <script type="module" src="/controllers/ControllerLogin.js"></script>
 </body>
 
 </html>
