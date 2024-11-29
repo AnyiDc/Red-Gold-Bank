@@ -788,3 +788,10 @@ h1 {
 #formulario_registro,#login span{
   font-size:small ;
 }
+
+.correcto{
+  background-color: green;
+}
+.incorrecto{
+  background-color: #ad1010;
+}

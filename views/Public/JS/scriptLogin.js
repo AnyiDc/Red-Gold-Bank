@@ -1,20 +1,22 @@
 // Sign Up Switch Function
-function signUp(){ 
-    document.getElementById("signUp").style.top="45px"
-    document.getElementById("box").style.height="600px" //Change this value when a bug occurs
-    document.getElementById("signIn").style.top="-450px"
-    document.getElementById("forgetPassword").style.top="-450px"
+function showForgetPassword() {
+    document.getElementById("Login").style.display = "none";
+    document.getElementById("forgetPassword").style.display = "block";
+    document.getElementById("formulario_registro").style.display = "none";
+}
 
+function showformularioRegistro() {
+    document.getElementById("Login").style.display = "none";
+    document.getElementById("forgetPassword").style.display = "none";
+    document.getElementById("formulario_registro").style.display = "block";
 }
-function signIn(){
-    document.getElementById("signIn").style.top="45px"
-    document.getElementById("box").style.height="420px" //Change this value when a bug occurs
-    document.getElementById("signUp").style.top="450px"
-    document.getElementById("forgetPassword").style.top="-450px"
+
+function showLogin() {
+    document.getElementById("Login").style.display = "block";
+    document.getElementById("forgetPassword").style.display = "none";
+    document.getElementById("formulario_registro").style.display = "none";
 }
-function forgetPassword(){
-    document.getElementById("forgetPassword").style.top="45px"
-    document.getElementById("box").style.height="300px" //Change this value when a bug occurs
-    document.getElementById("signUp").style.top="450px"
-    document.getElementById("signIn").style.top="450px"
-}
+
+window.showForgetPassword = showForgetPassword;
+window.showformularioRegistro = showformularioRegistro;
+window.showLogin = showLogin;
