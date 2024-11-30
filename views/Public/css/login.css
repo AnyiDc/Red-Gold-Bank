@@ -794,7 +794,7 @@ margin-right: 10%;
 }
 
 .i.correcto {
-  border: solid 2px rgb(35, 206, 35); /* Cambia el borde a verde si es correcto */
+  border: solid 1.5px rgb(35, 206, 35); /* Cambia el borde a verde si es correcto */
 }
 
 .i.incorrecto  {
