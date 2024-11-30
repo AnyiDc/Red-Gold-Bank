@@ -1,5 +1,5 @@
 export const expresionesRegulares = {
-    nombre: /^[A-ZÁÉÍÓÚÜÑ\s]+$/,
+    nombre: /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{5,30}$/,
     usuario: /^[a-z]{4,10}$/,
     contrasenia:
     /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,10}$/,

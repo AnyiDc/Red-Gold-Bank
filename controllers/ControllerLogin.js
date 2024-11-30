@@ -10,52 +10,115 @@ for (let i = 0; i < inputs.length; i++) {
 
 function validar(e) {
 
-    console.log(e.target.name)
-    switch (e.target.name) {
+
+    const input = e.target; // Campo actual
+    const parent = input.closest('.inputBox'); // Encuentra el contenedor más cercano con clase 'inputBox'
+    const icon = parent.querySelector('.i'); // Encuentra el ícono dentro del contenedor
+
+    if (!icon) {
+        console.warn("No se encontró un elemento con la clase '.i' para el campo:", input.name);
+        return;
+    }
+
+    switch (input.name) {
         case "nombreLogin":
-               if(expresionesRegulares.nombre.test(e.target.value))
-                {
-                    console.log("Nombre válido")
-                } else {
-                    console.log("Nombre inválido")
-                }
-            break;
-        case "contraseniaLogin":
-            if(expresionesRegulares.contrasenia.test(e.target.value))
-            {
-                console.log("Contraseña válida")
+            if (expresionesRegulares.nombre.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
             } else {
-                console.log("Contraseña inválida")
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
             }
             break;
+
+        case "contraseniaLogin":
+            if (expresionesRegulares.contrasenia.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
+
         case "recuperarclave":
-            if(expresiones.contrasenia.test(e.target.value))
-            {
-                console.log("Contraseña válida")
-            }else{
-                console.log("Contraseña inválida")
-            }
-            break;
-        case "nombreRegistro":
-            if(expresionesRegulares.nombre.test(e.target.value)){
-                console.log("Nombre válido")
-            }else{
-                console.log("Nombre inválido")
+            if (expresionesRegulares.cedula.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
             }
             break;
 
+        case "registroNombre":
+            if (expresionesRegulares.nombre.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
         case "registroDocumento":
+            if (expresionesRegulares.cedula.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
+        case "registroEmail":
+            if (expresionesRegulares.correo.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
+        case "registroTelefono":
+            if (expresionesRegulares.telefono.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
+        case "registroDireccion":
+            if (expresionesRegulares.direccion.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
             break;
 
-        case "correoRegistro":
-            break;
-        case "contraseniaRegistro":
+        case "registroCedula":
+            if (expresionesRegulares.cedula.test(input.value)) {
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
             break;
 
 
+        case "registroClave":
+            if (expresionesRegulares.contrasenia.test(input.value)){
+                icon.classList.add('correcto');
+                icon.classList.remove('incorrecto');
+            } else {
+                icon.classList.add('incorrecto');
+                icon.classList.remove('correcto');
+            }
+            break;
 
         default:
-            console.log("no hay campo")
-
+            console.log("Campo no reconocido:", input.name);
     }
 }
