@@ -762,7 +762,7 @@ h1 {
  
 }
 
-#Login {
+#login {
   display: block; /* Visible  */
   display: flex;
   justify-content: center;
@@ -771,7 +771,7 @@ h1 {
 }
 #login h2{
   position: relative;
-margin-right: 10%;
+  margin-right: 10%;
 }
 
 #formulario_registro .inputBox{
@@ -779,7 +779,7 @@ margin-right: 10%;
  display: flex;
  justify-content: center;
  margin-bottom: 10%;
-  margin: 5%; /* Reduce el margen entre los contenedores de input */
+  margin: 5%;
 
 }
 #formulario_registro h2{
@@ -790,7 +790,7 @@ margin-right: 10%;
 
 }
 #formulario_registro,#login span{
-  font-size:small ;
+  font-size:large ;
 }
 
 .i.correcto {
