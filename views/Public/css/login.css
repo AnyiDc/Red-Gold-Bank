@@ -498,11 +498,216 @@ h1 {
   }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 1366px) and (max-height: 766px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     /* Tamaño para laptops */
   }
+  .contP {
+    position: absolute;
+    top: 33vh;
+    left: 23vw;
+    background-color: white;
+    box-shadow: 0.05rem 0.05rem 0.5rem rgba(255, 0, 0, 1.9);
+    height: 66vh;
+    width: 57vw;
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .box {
+    position: absolute;
+    width: 25vw;
+    left: 25%;
+    top: 38vh;
+    height: 56vh;
+    background: var(--secondColor);
+    transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.192);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  
+  }
+
+  .form {
+    background-color: #ffffff;
+    position: absolute;
+    margin-left: 0.2rem;
+    inset: 0.2rem;
+    border-radius: 0.5rem;
+    /* background: var(--secondColor); */
+    z-index: 10;
+    padding: 3vh 3vw;
+    display: flex;
+    overflow: hidden;
+    
+  }
+  
+  #Login, #forgetPassword, #formulario_registro {
+    display: none; 
+    position: absolute;
+    top: 45%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+    width: 85%;
+    padding: 40%;
+    background: #ffffff;
+    border-radius: 10px;
+   
+   
+  }
+
+  .inputBox {
+    position: relative;
+    width: 100%;
+    margin: 0.9rem auto;
+    display:flex; 
+    justify-content: center;
+    
+  }
+
+  /*esta propiedad modifica el input*/
+  .inputBox input {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    background-color: #ff0000;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: border-color 0.5s;
+    background-color: aqua;
+  
+  }
+
+  .i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    height: 0.2rem;
+    border-radius: 0.25rem;
+    transition: 0.5s;
+    background-color: rgb(34, 30, 30);
+    pointer-events: none;
+    border-radius: 0.5vw;
+    z-index: 1;
+    
+  }
+  .inputBox span {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-size: 0.9rem;
+    color: red;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .inputBox input:valid~span,
+.inputBox input:focus~span {
+  color: gold;
+  transform: translateX(0px) translateY(-20px);
+  font-size: 0.9rem;
+  font: 650;
+}
+
+.inputBox input:valid~i,
+.inputBox input:focus~i {
+  height: 2.75rem;
+}
+
+  .contP p {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    right: 8%;
+    top: 53%;
+    transform: translateY(-50%);
+    text-align: justify;
+    font-size: 0.9rem;
+  }
+  
+  .contP img {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    width: 40%;
+    height: auto;
+  }
+  .links a {
+ 
+    margin: 0.435rem 0;
+    font-size: 0.7375rem;
+    color: #ff0000;
+    text-decoration: none;
+    
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    flex-direction:row   ; /* O 'row' para alinearlos horizontalmente */
+    gap: 15%; 
+  }
+  #btn_iniciarsesion, #btn_registrarme,#btn_forgetPassword{
+    position: relative;
+    border: none;
+    outline: none;
+    background: red;
+    color: gold;
+    padding: 0.875rem 1.5625rem;
+    width: 6.20rem;
+    margin-top: 0.4rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-right: 40%;
+  
+  }
+
+  #formulario_registro .inputBox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6%;
+     margin: 3%;
+     height: 2.3rem;
+   }
+
+   #formulario_registro .inputBox .i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    height: 0.2rem;
+    border-radius: 0.25rem;
+    transition: 0.5s;
+    background-color: rgb(34, 30, 30);
+    pointer-events: none;
+    border-radius: 0.5vw;
+    z-index: 1;
+     
+   }
+   #formulario_registro h2{
+     text-align: center;
+     font-size:0.8rem;
+     margin-top: 10%;
+    
+   
+   }
+   #formulario_registro,#login span{
+     font-size:small ;
+   }
+
+
 }
 
 .form h2 {
@@ -511,15 +716,15 @@ h1 {
   text-align: right;
   letter-spacing: 0.1em;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .inputBox {
   position: relative;
-  width: 100%;
-  margin: 2rem auto;
+  width: 96%;
+  margin: 0.8rem auto;
   display:flex; 
-  justify-content: center;
+  justify-content: center; 
 }
 
 /*esta propiedad modifica el input*/

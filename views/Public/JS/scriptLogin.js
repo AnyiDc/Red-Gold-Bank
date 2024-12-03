@@ -38,7 +38,7 @@ function validar(e) {
     const parent = input.closest('.inputBox'); // Encuentra el contenedor más cercano con clase 'inputBox'
     const icon = parent.querySelector('.i'); // Encuentra el ícono dentro del contenedor
 
-    console.log("evento en " + e.target.name  );
+    // console.log("evento en " + e.target.name  );
     if (!icon) {
         console.warn("No se encontró un elemento con la clase '.i' para el campo:", input.name);
         return;
