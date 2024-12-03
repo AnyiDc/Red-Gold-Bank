@@ -1,11 +1,12 @@
-import { usuarios } from "../models/ModelUsuario.js";
+import { usuarios } from "../models/ModelLogin.js";
 
 document.getElementById("btn_iniciarsesion").addEventListener("click", function (event) {
     event.preventDefault(); // Evitar el envío del formulario
 
     // Capturar valores del formulario
     const loginUsuario = document.getElementById("nombreLogin").value;
-    const loginContrasena = document.getElementById("contraseniaLogin")
+    const loginContrasena = document.getElementById("contraseniaLogin").value;
+
     // Validar campos
     if (!validarCampos(loginUsuario, loginContrasena)) return;
 
@@ -15,70 +16,73 @@ document.getElementById("btn_iniciarsesion").addEventListener("click", function 
 
 function validarCampos(username, password) {
     if (!username || !password) {
-        Swal.fire("Error", "Por favor, complete todos los campos.", "error");
+        alert("Por favor, complete todos los campos.");
         return false;
     }
     if (username.length < 3) {
-        Swal.fire("Error", "El nombre de usuario debe tener al menos 3 caracteres.", "error");
+        alert("El nombre de usuario debe tener al menos 3 caracteres.");
         return false;
     }
     if (password.length < 6) {
-        Swal.fire("Error", "La contraseña debe tener al menos 6 caracteres.", "error");
+        alert("La contraseña debe tener al menos 6 caracteres.");
         return false;
     }
     return true;
 }
 
 function login(username, password) {
-    const usuarioValido = usuarios.some((user) => {
-        if (username === user.usuario && password === user.contrasena) {
-            // Usuario válido encontrado
-            Swal.fire({
-                title: "Bienvenido: " + user.nombre,
-                html: "Será redireccionado en: <b></b> milliseconds.",
-                timer: 4000,
-                icon: "success",
-                timerProgressBar: true,
-                didOpen: () => {
-                    Swal.showLoading();
-                    const timer = Swal.getPopup().querySelector("b");
-                    setInterval(() => {
-                        timer.textContent = `${Swal.getTimerLeft()}`;
-                    }, 100);
-                },
-                willClose: () => {
-                    window.location.href = "/views/pages/viewCredito.html";
-                },
-            });
-            return true; // Detener el ciclo al encontrar un usuario válido
-        }
-    });
+    const usuarioValido = usuarios.find(
+        (user) =>
+            username.toLowerCase() === user.nombre.toLowerCase() &&
+            password === user.contrasena
+    );
 
-    // Si ningún usuario es válido
-    if (!usuarioValido) {
-        Swal.fire({
-            title: "Error",
-            text: "Usuario y/o contraseña incorrectos o no existen.",
-            icon: "error",
-        });
+    if (usuarioValido) {
+        alert(`Bienvenido: ${usuarioValido.nombre}`);
+        // Redireccionar al usuario después de un inicio de sesión exitoso
+        window.location.href = "./views/Pages/userInterfaz.html";
+    } else {
+        alert("Usuario y/o contraseña incorrectos o no existen.");
     }
 }
 
-export function registro() {
-  let registroNombre = document.getElementById("register-nombre").value;
-  let registroUsuario = document.getElementById("register-usuario").value;
-  let registroCorreo = document.getElementById("register-correo").value;
-  let registroContrasena = document.getElementById("register-contrasena").value;
-  let registroConfirmar = document.getElementById("register-confirmar").value;
-  let newRegistro = {
-    nombre: registroNombre,
-    usuario: registroUsuario,
-    correo: registroCorreo,
-    contrasena: registroContrasena,
-    confirmar: registroConfirmar,
-  };
-  usuarios.unshift(newRegistro);
-  document.getElementById("form-register").style.display = "none";
-  document.getElementById("form-login").style.display = "flex";
-  console.log(usuarios);
+// Corregir la parte de la función de registro
+document.getElementById("btn_registrarme").addEventListener("click", function (event) { 
+    registro(event);
+});
+
+function registro(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    let registroNombre = document.getElementById("registroNombre").value;
+    let registroDocumento = document.getElementById("registroDocumento").value;
+    let registroCorreo = document.getElementById("registroEmail").value;
+    let registroContrasena = document.getElementById("registroClave").value;
+    let registroConfirmar = document.getElementById("registroConfirmar").value; // Corregir el id aquí
+
+    // Validar que las contraseñas coincidan
+    if (registroContrasena !== registroConfirmar) {
+        alert("Error", "Las contraseñas no coinciden.", "error");
+        return;
+    }
+
+    // Crear un nuevo registro de usuario
+    let newRegistro = {
+        nombre: registroNombre,
+        documento: registroDocumento,
+        correo: registroCorreo,
+        contrasena: registroContrasena,
+    };
+
+    // Aquí puedes agregar la lógica para guardar el nuevo usuario (en un array o en la base de datos)
+    usuarios.unshift(newRegistro);  // Agregar usuario al principio del array
+
+    // Ocultar formulario de registro y mostrar login
+    document.getElementById("formulario_registro").style.display = "none";
+    document.getElementById("login").style.display = "flex";
+
+    console.log(usuarios); // Verifica en la consola si los usuarios se están almacenando correctamente
+
+    // Mensaje de éxito
+    alert("¡Registrado!", `El usuario ${registroNombre} ha sido registrado con éxito.`, "success");
 }
