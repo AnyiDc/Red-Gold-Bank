@@ -1,124 +1,88 @@
-import { expresionesRegulares } from "../helpers/expresionesRegulares.js";
+import { usuarios } from "../models/ModelLogin.js";
 
+document.getElementById("btn_iniciarsesion").addEventListener("click", function (event) {
+    event.preventDefault(); // Evitar el envío del formulario
 
-let inputs = document.getElementsByTagName("input");
+    // Capturar valores del formulario
+    const loginUsuario = document.getElementById("nombreLogin").value;
+    const loginContrasena = document.getElementById("contraseniaLogin").value;
 
-for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("keyup", validar);
+    // Validar campos
+    if (!validarCampos(loginUsuario, loginContrasena)) return;
 
+    // Procesar login
+    login(loginUsuario, loginContrasena);
+});
+
+function validarCampos(username, password) {
+    if (!username || !password) {
+        alert("Por favor, complete todos los campos.");
+        return false;
+    }
+    if (username.length < 3) {
+        alert("El nombre de usuario debe tener al menos 3 caracteres.");
+        return false;
+    }
+    if (password.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres.");
+        return false;
+    }
+    return true;
 }
 
-function validar(e) {
+function login(username, password) {
+    const usuarioValido = usuarios.find(
+        (user) =>
+            username.toLowerCase() === user.nombre.toLowerCase() &&
+            password === user.contrasena
+    );
 
+    if (usuarioValido) {
+        alert(`Bienvenido: ${usuarioValido.nombre}`);
+        // Redireccionar al usuario después de un inicio de sesión exitoso
+        window.location.href = "./views/Pages/userInterfaz.html";
+    } else {
+        alert("Usuario y/o contraseña incorrectos o no existen.");
+    }
+}
 
-    const input = e.target; // Campo actual
-    const parent = input.closest('.inputBox'); // Encuentra el contenedor más cercano con clase 'inputBox'
-    const icon = parent.querySelector('.i'); // Encuentra el ícono dentro del contenedor
+// Corregir la parte de la función de registro
+document.getElementById("btn_registrarme").addEventListener("click", function (event) { 
+    registro(event);
+});
 
-    if (!icon) {
-        console.warn("No se encontró un elemento con la clase '.i' para el campo:", input.name);
+function registro(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    let registroNombre = document.getElementById("registroNombre").value;
+    let registroDocumento = document.getElementById("registroDocumento").value;
+    let registroCorreo = document.getElementById("registroEmail").value;
+    let registroContrasena = document.getElementById("registroClave").value;
+    let registroConfirmar = document.getElementById("registroConfirmar").value; // Corregir el id aquí
+
+    // Validar que las contraseñas coincidan
+    if (registroContrasena !== registroConfirmar) {
+        alert("Error", "Las contraseñas no coinciden.", "error");
         return;
     }
 
-    switch (input.name) {
-        case "nombreLogin":
-            if (expresionesRegulares.nombre.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
+    // Crear un nuevo registro de usuario
+    let newRegistro = {
+        nombre: registroNombre,
+        documento: registroDocumento,
+        correo: registroCorreo,
+        contrasena: registroContrasena,
+    };
 
-        case "contraseniaLogin":
-            if (expresionesRegulares.contrasenia.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
+    // Aquí puedes agregar la lógica para guardar el nuevo usuario (en un array o en la base de datos)
+    usuarios.unshift(newRegistro);  // Agregar usuario al principio del array
 
-        case "recuperarclave":
-            if (expresionesRegulares.cedula.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
+    // Ocultar formulario de registro y mostrar login
+    document.getElementById("formulario_registro").style.display = "none";
+    document.getElementById("login").style.display = "flex";
 
-        case "registroNombre":
-            if (expresionesRegulares.nombre.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-        case "registroDocumento":
-            if (expresionesRegulares.cedula.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-        case "registroEmail":
-            if (expresionesRegulares.correo.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-        case "registroTelefono":
-            if (expresionesRegulares.telefono.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-        case "registroDireccion":
-            if (expresionesRegulares.direccion.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
+    console.log(usuarios); // Verifica en la consola si los usuarios se están almacenando correctamente
 
-        case "registroCedula":
-            if (expresionesRegulares.cedula.test(input.value)) {
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-
-
-        case "registroClave":
-            if (expresionesRegulares.contrasenia.test(input.value)){
-                icon.classList.add('correcto');
-                icon.classList.remove('incorrecto');
-            } else {
-                icon.classList.add('incorrecto');
-                icon.classList.remove('correcto');
-            }
-            break;
-
-        default:
-            console.log("Campo no reconocido:", input.name);
-    }
+    // Mensaje de éxito
+    alert("¡Registrado!", `El usuario ${registroNombre} ha sido registrado con éxito.`, "success");
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-import * aslang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -84,22 +84,22 @@ import * aslang="en">
                 <form action="">
                     <h2>Registrarme</h2>
                     <div class="inputBox">
-                        <input class="inputs_registro" name="registroNombre" type="text" required="required">
+                        <input class="inputs_registro" name="registroNombre"  id="registroNombre" type="text" required="required">
                         <span>Nombre completo</span>
                         <i class = "i"></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" name="registroDocumento" type="text" required="required">
+                        <input class="inputs_registro" name="registroDocumento"  id ="registroDocumento"type="text" required="required">
                         <span>Documento </span>
                         <i class = "i"></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" name="registroEmail" type="email" required="required">
+                        <input class="inputs_registro" name="registroEmail" id="registroEmail" type="email" required="required">
                         <span>Email</span>
                         <i class = "i"></i>
                     </div>
                     <div class="inputBox">
-                        <input class="inputs_registro" name="registroClave" type="password" required="required">
+                        <input class="inputs_registro" name="registroClave" id="registroClave" type="password" required="required">
                         <span>Contraseña</span>
                         <i class = "i"></i>
                     </div>
@@ -113,9 +113,10 @@ import * aslang="en">
             </div>
         </div>
     </div>
-
+    
     <script type="module" src="/views/Public/JS/scriptLogin.js"></script>
     <script type="module" src="/controllers/ControllerLogin.js"></script>
+    
 </body>
 
 </html>
