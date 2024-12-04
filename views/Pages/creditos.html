@@ -4,31 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/views/CSS/creditos.css">
+    <link rel="stylesheet" href="../Public/css/creditos.css">
 </head>
 <body>
-    <header ></header>
-    <main class="mainCredi">
-        <div class="divCredi">
-            <form action="">
-                <p>Cedula:</p>
-                <label for="Ingresar Cedula"><input type="text"  placeholder="Ingrese su Cedula"></label>
-                <p>Referencia de Pago:</p>
-                <label class="tutu"><input type="text" placeholder="Ingrese la referencia del credito"></label>
-                <button class="crediBot"><a href="">Enviar</a></button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
 
+    <header class="cabecera">
+        <img class="cabecera-img" src="/views/Public/img/Logo.png" alt="RedGoldBank-LOGO">
+        <nav>
+            <ul class="menu-Ul">
+                <li class="elementos"><a href="/views/Pages/personas.html">Personas</a></li>
+                <li class="elementos"><a href="/views/Pages/creditos.html">Prestamos RG</a></li>
+                <li class="elementos"><a href="/views/Pages/beneficios.html">Beneficios</a></li>
+                <li class="elementos"><a href="">Nosotros</a></li>
+                <li class="nav-Derecha"><a class="destacado" href="/views/Pages/login.html">Acceso</a></li>
+                <li class="elementos"><a href="/views/Pages/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="menu">
+
+        <div class="menu-formulario">
+            <form id="form" action="">
+                <div class="formulario-inputs">
+                    <label class="formulario-label" for="cedula">Cédula:</label>
+                    <input class="input-cedula" id="cedula" name="cedula" type="text" placeholder="Ingrese su Cédula">
+                </div>
+
+                <div class="formulario-inputs">
+                    <label class="formulario-label" for="referencia">Referencia de pago:</label>
+                    <input class="input-password" id="referencia" name="referencia" type="text"
+                        placeholder="Ingrese la referencia del crédito">
+                </div>
+
+                <button class="formulario-btn" id="submit" type="submit">
+                    Enviar
+                </button>
             </form>
-            
         </div>
-        
-        <section class="sectionCredi">
-            <h4>En RedGold-Bank, Tu confienza es lo importante para nosotros.</h5>
-            <p class="pCredi">Por eso, protegemos todos tus datos para que te sientas seguro en todo 
-                momento al usar nuestra plataforma.Al realizar el pago de tus créditos, puedes estar 
-                tranquilo, ya que hemos implementado estrictos sistemas de seguridad que garantizan que 
-                cada transacción sea rápida, segura y sin complicaciones.</p>
-            
+
+        <section class="menu-informacion">
+            <h4 class="informacion-titulo">
+                En Red Gold Bank, tu confianza es lo más importante para nosotros.
+            </h4>
+            <p class="informacion-parrafo">
+                Por eso, protegemos todos tus datos para que te sientas seguro en todo
+                momento al usar nuestra plataforma. Al realizar el pago de tus créditos,
+                puedes estar tranquilo, ya que hemos implementado estrictos sistemas de
+                seguridad que garantizan que cada transacción sea rápida, segura y sin
+                complicaciones.
+            </p>
+            <img class="mujerRoja-Creditos" src="../Public/img/mujerRoja-Creditos.png" alt="mujerRoja_Credito">
         </section>
+
     </main>
-    <img src="/views/IMG/Elementos Graficos/38084201_8588977 (1).png" alt="Imagen de Persona" ></body>
+    <footer></footer>
+    
+    <script type="module" src="/views/public/js/script.js"></script>
+    <script type="module" src="/views/public/js/scriptCreditos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
