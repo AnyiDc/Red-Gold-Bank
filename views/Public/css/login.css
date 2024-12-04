@@ -592,7 +592,7 @@ h1 {
     left: 0;
     bottom: 0;
     width: 98%;
-    height: 0.2rem;
+    height: 0.1rem;
     border-radius: 0.25rem;
     transition: 0.5s;
     background-color: rgb(34, 30, 30);
@@ -610,7 +610,8 @@ h1 {
     pointer-events: none;
     transition: 0.5s;
   }
-  .inputBox input:valid~span,
+
+#formulario_registro .inputBox input:valid~span,
 .inputBox input:focus~span {
   color: gold;
   transform: translateX(0px) translateY(-20px);
@@ -628,7 +629,7 @@ h1 {
     height: auto;
     position: absolute;
     right: 8%;
-    top: 53%;
+    top: 60%;
     transform: translateY(-50%);
     text-align: justify;
     font-size: 0.9rem;
@@ -678,24 +679,12 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 6%;
-     margin: 3%;
+     margin: 6%;
      height: 2.3rem;
+     background-color: aqua;
    }
 
-   #formulario_registro .inputBox .i{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 98%;
-    height: 0.2rem;
-    border-radius: 0.25rem;
-    transition: 0.5s;
-    background-color: rgb(34, 30, 30);
-    pointer-events: none;
-    border-radius: 0.5vw;
-    z-index: 1;
-     
-   }
+ */
    #formulario_registro h2{
      text-align: center;
      font-size:0.8rem;
