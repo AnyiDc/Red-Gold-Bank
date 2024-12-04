@@ -1,130 +1,288 @@
-@font-face{
-    font-family:'LetraPrincipal';
-    src: url('/views/Fonts/LetraPrincipal.otf');
+@font-face {
+  font-family: 'LetraPrincipal';
+  src: url('../Fonts/LetraPrincipal.otf');
+}
+
+@font-face {
+  font-family: 'FuenteLogin';
+  src: url('../Fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'FuenteBoton';
+  src: url('/views/Fonts/Garet-Book.otf');
+}
+
+@font-face {
+  font-family: 'FuenteTexto';
+  src: url('../Fonts/Garet-Book.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Reem Kufi Fun", sans-serif;
+}
+
+body {
+  max-height: 500px;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cabecera {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.cabecera nav {
+  background-color: black;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+}
+
+.cabecera ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.cabecera li {
+  margin-right: 20px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cabecera a {
+  color: #b42525;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'FuentePrincipal';
+  font-size: 18px;
+  text-align: center;
+}
+
+.elementos::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: transform 0.6s ease-in-out, border-color 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.elementos:hover::before {
+  border-color: red;
+  transform: rotate(360deg);
+}
+
+.cabecera li:hover a {
+  color: red;
+}
+
+.nav-Derecha {
+  margin-left: auto;
+}
+
+.destacado {
+  font-weight: bold;
+}
+
+.cabecera-img {
+  width: 280px;
+  max-height: 100px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 40%;
+}
+
+.menu-formulario {
+  width: 28%;
+  height: 430px;
+  border: solid 4px #B42525;
+  margin-top: 3%;
+  margin-left: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.input-cedula,
+.input-password {
+  width: 300px;
+  max-width: 300px;
+  height: 50px;
+  border: solid 3px #B42525;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease
+}
+
+.input-cedula.incorrecto,
+.input-password.incorrecto {
+  border: 3px solid red;
+}
+
+.mensaje-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.input-cedula.incorrecto+.mensaje-error,
+.input-password.incorrecto+.mensaje-error {
+  display: block;
+}
+
+.formulario-label {
+  font-family: 'FuenteTexto';
+  font-weight: bold;
+  top: 16px;
+}
+
+.formulario-btn {
+  width: 270px;
+  height: 50px;
+  background-color: #B42525;
+  border-radius: 16px;
+  margin-top: 20px;
+  border: none;
+  color: gold;
+}
+
+.menu-informacion {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+
+.informacion-titulo {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'LetraPrincipal';
+}
+
+.informacion-parrafo {
+  font-family: 'LetraPrincipal';
+  font-size: 20px;
+  color: black;
+}
+
+.mujerRoja-Creditos {
+  width: 500px;
+  max-width: 500px;
+  height: 350px;
+  max-height: 350px;
+  margin-top: 30px;
+  margin-left: 300px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .cabecera-img {
+    width: 200px;
+    max-height: 80px;
+    margin-left: 30%;
   }
-  @font-face {
-    font-family:'FuenteLogin';
-    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+
+  .menu-formulario {
+    width: 35%;
+    margin-left: 40px;
   }
-  @font-face {
-    font-family:'FuenteBoton';
-    src: url('/views/Fonts/Garet-Book.otf');
+
+  .informacion-titulo {
+    font-size: 18px;
   }
-  @font-face {
-    font-family:'FuenteTexto';
-    src: url('/views/Fonts/Garet-Book.otf');
+
+  .informacion-parrafo {
+    font-size: 18px;
   }
-  /*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
-  *{
-    margin: 0;
-    padding: 0;
+}
+
+@media (max-width: 768px) {
+  .cabecera-img {
+    width: 150px;
+    max-height: 70px;
+    margin-left: 25%;
   }
-  header{
-    background-color: black;
-    width: 100%;
-    height: 70px;
+
+  .cabecera nav {
+    padding: 8px;
   }
-  main{
-    display: flex;
+
+  .cabecera a {
+    font-size: 16px;
   }
-  .divCredi{
-    width: 50%;
-    
-    padding-top: 70px;
-    
-    
-    padding-left: 100px;
+
+  .menu-formulario {
+    width: 70%;
+    margin-left: 15px;
   }
-  .sectionCredi{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    
-  }
-  form{
-    border: solid black 2px;
-    width: 60%;
-    height: 430px;
-    display: flex;
-    padding-inline: 30px;
+
+  .menu-informacion {
     flex-direction: column;
-    
   }
-  label{
-    margin-top: 30px;
+
+  .mujerRoja-Creditos {
+    width: 90%;
+    margin-left: 0;
   }
-  input{
+}
+
+@media (max-width: 480px) {
+  .cabecera-img {
+    width: 120px;
+    max-height: 60px;
+    margin-left: 20%;
+  }
+
+  .menu-formulario {
     width: 90%;
     margin-left: 5px;
-    
   }
-  p{
-    font-family: 'FuenteTexto';
-    margin-top: 7px;
-   margin-left: 15px;
-   position: relative;
-   bottom: 0px;
-   margin-top: 30px;
+
+  .informacion-titulo {
+    font-size: 16px;
   }
-  h4{
-    font-family: 'FuenteTexto';
-    color: #b42525;
-    position: absolute;
-    top: 150px;
-    left: 600px;
+
+  .informacion-parrafo {
+    font-size: 16px;
   }
-  
-  
-  .crediBot{
-    font-family:'FuenteBoton';
-    background-color: #b42525;
-    color: yellow;
-    width: 50%;
-    height: 10%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    margin-left: 110px;
-    position: relative;
-    top: 110px;
-  }
-  .crediBot a{
-    text-decoration: none;
-    color: gold;
-    padding: 1%;
-  }
-  .crediBot:hover{
-    padding: 20px;
-    cursor: pointer;
-    color: white;
-    background-color:red;
-  }
-  .pCredi{
-    margin-top: 30px;
-    margin-left: 15px   ;
-    position: absolute;
-    top:160px;
-    left: 580px  ;
-    right: 50px;
-  }
-  
-  footer{
-    background-color: black;
+
+  .formulario-btn {
     width: 100%;
-    height: 70px;
-    position: absolute;
-    bottom: 0px;
   }
-  img{
-    width: 500px;
-    height: 300px;
-    margin-top: 30px;
-    margin-left: 40px;
-    position: absolute;
-    top: 240px;
-    left: 700px;
-  }         
+}
