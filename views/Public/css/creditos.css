@@ -133,13 +133,22 @@ form {
 
 .input-cedula,
 .input-password {
-  width: 300px;
+  /* width: 300px;
   max-width: 300px;
   height: 50px;
   border: solid 3px #B42525;
   border-radius: 5px;
   padding: 10px;
-  transition: border-color 0.3s ease
+  transition: border-color 0.3s ease */}
+  i {
+    display: block;        /* Cambia el comportamiento de inline a bloque */
+    width: 100%;           /* Hace que ocupe todo el ancho disponible */
+    height: 2px;           /* Define el grosor de la línea */
+    background-color: black;  /* Establece el color de la línea */
+    margin-top: 10px;      /* Ajusta el espacio por encima de la línea */
+    margin-bottom: 10px;   /* Ajusta el espacio por debajo de la línea */
+  
+  
 }
 
 .input-cedula.incorrecto,
