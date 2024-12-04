@@ -1,18 +1,18 @@
 
 function showForgetPassword() {
-    document.getElementById("Login").style.display = "none";
+    document.getElementById("login").style.display = "none";
     document.getElementById("forgetPassword").style.display = "block";
     document.getElementById("formulario_registro").style.display = "none";
 }
 
 function showformularioRegistro() {
-    document.getElementById("Login").style.display = "none";
+    document.getElementById("login").style.display = "none";
     document.getElementById("forgetPassword").style.display = "none";
     document.getElementById("formulario_registro").style.display = "block";
 }
 
 function showLogin() {
-    document.getElementById("Login").style.display = "block";
+    document.getElementById("login").style.display = "block";
     document.getElementById("forgetPassword").style.display = "none";
     document.getElementById("formulario_registro").style.display = "none";
 }
@@ -38,7 +38,7 @@ function validar(e) {
     const parent = input.closest('.inputBox'); // Encuentra el contenedor más cercano con clase 'inputBox'
     // const icon = parent.querySelector('.i'); // Encuentra el ícono dentro del contenedor
 
-    console.log("evento en " + e.target.name  );
+    // console.log("evento en " + e.target.name  );
     if (!icon) {
         console.warn("No se encontró un elemento con la clase '.i' para el campo:", input.name);
         return;

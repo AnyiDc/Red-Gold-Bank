@@ -58,9 +58,8 @@ function registro(event) {
     let registroDocumento = document.getElementById("registroDocumento").value;
     let registroCorreo = document.getElementById("registroEmail").value;
     let registroContrasena = document.getElementById("registroClave").value;
-    let registroConfirmar = document.getElementById("registroConfirmar").value; // Corregir el id aquí
-
-    // Validar que las contraseñas coincidan
+    let registroConfirmar = document.getElementById("registroClave").value; 
+  
     if (registroContrasena !== registroConfirmar) {
         alert("Error", "Las contraseñas no coinciden.", "error");
         return;
@@ -81,8 +80,8 @@ function registro(event) {
     document.getElementById("formulario_registro").style.display = "none";
     document.getElementById("login").style.display = "flex";
 
-    console.log(usuarios); // Verifica en la consola si los usuarios se están almacenando correctamente
+    console.log(usuarios); 
 
     // Mensaje de éxito
-    alert("¡Registrado!", `El usuario ${registroNombre} ha sido registrado con éxito.`, "success");
+    alert(`¡Registrado! El usuario ${registroNombre} ha sido registrado con éxito.`);
 }
