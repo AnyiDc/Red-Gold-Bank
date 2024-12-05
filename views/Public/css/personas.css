@@ -23,32 +23,22 @@
     margin: 0;
     padding: 0;
 }
-
-.cabecera {
-    position: fixed;
-    /* Fija el header en la parte superior */
-    top: 0;
-    left: 0;
+body{
     width: 100%;
-    height: 50px;
-    padding: 0;
-    z-index: 1000;
+    height: 100vh;
 }
+/*Menu de navegacion*/
 
 .cabecera img {
     width: 20%;
     height: 90px;
-    /* Ajusta un máximo para pantallas pequeñas */
     transition: all 0.3s ease-in-out;
-    /* Animación suave para cambios de tamaño */
     margin-left: 40%;
-    /* Centra la imagen en la cabecera */
-
 }
 
 .cabecera nav {
-    background-color: black;
-    padding: 5px;
+    background-color: #293737;
+    padding: 10px;
     position: sticky;
     top: 0px;
 }
@@ -107,14 +97,13 @@
 .destacado {
     font-weight: bold;
 }
-
 main {
     display: flex;
 }
 
 .divPersonas {
     width: 50%;
-    padding-top: 140px;
+    margin-top: 30px;
     padding-left: 50px;
 }
 
@@ -123,12 +112,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 130px;
-
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 form {
-    border: solid black 2px;
+    box-shadow:0 0 5px 5px #293737;
     width: 60%;
     height: 430px;
     display: flex;

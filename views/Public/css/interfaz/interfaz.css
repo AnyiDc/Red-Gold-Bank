@@ -14,41 +14,109 @@
     font-family:'FuenteTexto';
     src: url('/Public/Fonts/Poppins-Regular.ttf');
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding:0;
 }
-header{
-    background-color: black;
-    width: 100%;
-    height: 50px;
-    position: absolute;
+/*Menu de navegacion*/
+
+.cabecera img {
+    width: 20%;
+    height: 90px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 40%;
+}
+
+.cabecera nav {
+    background-color: #293737;
+    padding: 10px;
+    position: sticky;
     top: 0px;
+}
+
+.cabecera ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.cabecera li {
+    margin-right: 20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.cabecera a {
+    color: #b42525;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'FuentePrincipal';
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    display: inline;
+}
+
+.elementos::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.6s ease-in-out, border-color 0.6s ease-in-out;
+    z-index: -1;
+}
+
+.elementos:hover::before {
+    border-color: red;
+    transform: rotate(360deg);
+}
+
+.cabecera li:hover a {
+    color: red;
+    /* Cambiar color del texto en hover */
+}
+
+.nav-Derecha {
+    margin-left: auto;
+}
+
+.destacado {
+    font-weight: bold;
 }
 h3{
     font-family: 'LetraPrincipal';
     font-size: 50px;
     color:#b42525;
+    margin-top: 50px;
     margin-left: 10%;
 }
 h1{
     margin-left: 10%;
     font-family: 'FuenteLogin';
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .tarjeta{
     width: 30%;
     border-radius: 20px;
-    height: 600px;
+    height: 460px;
     border: solid 2px #b42525;
     position: absolute;
-    left: 50%;
-    top: 70px;
+    left: 60%;
+    top:200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 a{
     text-decoration: none;
