@@ -44,10 +44,9 @@ body {
 
 h1 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'LetraPrincipal';
     color: #b42525;
-    font-size: 50px;
     text-align: left;
 }
 
@@ -55,9 +54,8 @@ p {
     margin-bottom: 20px;
     font-size: 18px;
     font-family: 'FuenteTexto';
-    font-size: 40px;
     text-align: left;
-    margin-left: 25px;
+    margin-left: 5px;
 }
 
 .update-Form {
