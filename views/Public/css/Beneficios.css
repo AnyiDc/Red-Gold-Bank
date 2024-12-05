@@ -1,41 +1,50 @@
-@font-face{
-    font-family:'LetraPrincipal';
+@font-face {
+    font-family: 'LetraPrincipal';
     src: url('/views/Fonts/LetraPrincipal.otf');
 }
+
 @font-face {
-    font-family:'FuenteLogin';
+    font-family: 'FuenteLogin';
     src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
 }
+
 @font-face {
-    font-family:'FuenteBoton';
+    font-family: 'FuenteBoton';
     src: url('/views/Fonts/Garet-Book.otf');
 }
+
 @font-face {
-    font-family:'FuenteTexto';
+    font-family: 'FuenteTexto';
     src: url('/views/Fonts/Poppins-Regular.ttf');
 }
+
 /*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
-body{
+body {
     width: 100%;
     height: 100%;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-header{
+
+header {
     background-color: black;
     width: 100%;
     height: 70px;
 }
-main{
+
+main {
     display: flex;
 }
-section{
+
+section {
     width: 60%;
-    
+
 }
-h1{
+
+h1 {
     font-family: 'FuenteTexto';
     color: #b42525;
     width: 80%;
@@ -43,26 +52,30 @@ h1{
     margin-left: 5%;
     font-size: 35px;
 }
-p{
+
+p {
     font-family: 'FuenteTexto';
-    color:  black;
+    color: black;
     width: 85%;
     margin-top: 5%;
     margin-left: 5%;
     font-size: 30px;
 }
-div{
+
+div {
     width: 40%;
-    
+
 }
-img{
+
+img {
     width: 140%;
     height: 115%;
     z-index: -1;
     margin-top: 10%;
     margin-left: 1%;
 }
-footer{
+
+footer {
     background-color: black;
     width: 100%;
     height: 70px;

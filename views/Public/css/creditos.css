@@ -37,40 +37,44 @@ main {
   gap: 30px;
 }
 
-.cabecera img{   
-  width:20%;
-  height:90px;
-  transition: all 0.3s ease-in-out; 
-  margin-left: 40%; 
+.cabecera img {
+  width: 20%;
+  height: 90px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 40%;
 }
-.cabecera nav{
-   background-color:#293737;
-   padding: 10px;
-   position: sticky;
-   top: 0px;
+
+.cabecera nav {
+  background-color: #293737;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
 }
-.cabecera ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
+
+.cabecera ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
 }
-.cabecera li{
-    margin-right: 20px;
-    padding: 20px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+
+.cabecera li {
+  margin-right: 20px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 
 }
-.cabecera a{
-    color: #b42525;
-    text-decoration: none;
-    margin-left: 20px;
-    font-family:'FuentePrincipal';
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
+
+.cabecera a {
+  color: #b42525;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'FuentePrincipal';
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
 
 }
 
@@ -99,13 +103,14 @@ form {
 
 .input-cedula,
 .input-password {
-   width: 300px;
+  width: 300px;
   max-width: 300px;
   height: 50px;
   border: solid 3px #B42525;
   border-radius: 5px;
   padding: 10px;
-  transition: border-color 0.3s ease }
+  transition: border-color 0.3s ease
+}
 
 .input-cedula.incorrecto,
 .input-password.incorrecto {

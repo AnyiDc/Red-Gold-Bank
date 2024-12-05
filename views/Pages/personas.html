@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="/views/Public/css/personas.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecera">
+        <nav>
+            <ul class="menu-Ul">
+                <li class="elementos"><a href="/views/Pages/personas.html">Personas</a></li>
+                <li class="elementos"><a href="/views/Pages/creditos.html">Prestamos RG</a></li>
+                <li class="elementos"><a href="/views/Pages/beneficios.html">Beneficios</a></li>
+                <li class="elementos"><a href="">Nosotros</a></li>
+                <li class="nav-Derecha"><a class="destacado" href="/views/Pages/login.html">Acceso</a></li>
+                <li class="elementos"><a href="/views/Pages/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
     <div class="divPersonas">
     <h1>Préstamos Personales</h1>
@@ -18,22 +30,22 @@
     </div>
     <section class="sectionPersonas">
         <form action="">
-            <p>Nombre</p>
+            <p class="p_form">Nombre</p>
             <label for="">
                 <input name="nombre" id="nombre" placeholder="Ingrese su Nombre"></label>
-            <p>Número De identificación</p>
+            <p class="p_form">Número De identificación</p>
             <label for="">
                 <input name="identificacion" id="identificacion" placeholder="Identificación"></label>
-            <p>Correo Electrónico</p>
+            <p class="p_form">Correo Electrónico</p>
             <label for="">
                 <input name="correo" id="correo" placeholder="Correo electrónico"></label>
-            <p>Número de Celular</p>
+            <p class="p_form">Número de Celular</p>
             <label for="">
                 <input name="celular" id="celular" placeholder="Número de Celular"></label>
-            <p>Motivo del Préstamo</p>
+            <p class="p_form">Motivo del Préstamo</p>
             <label for="">
                 <input name="motivo" id="motivo" placeholder="Motivo"></label>
-            <p>Valor del Préstamo (Max. $300.000)</p>
+            <p class="p_form">Valor del Préstamo (Max. $300.000)</p>
             <label for="">
                 <input name="valor" id="valor" placeholder="Valor"></label>
             <button id="enviar">ENVIAR</button>
