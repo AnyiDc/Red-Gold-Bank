@@ -1,80 +1,180 @@
-@font-face{
-    font-family:'LetraPrincipal';
+@font-face {
+    font-family: 'LetraPrincipal';
     src: url('/views/Fonts/LetraPrincipal.otf');
 }
+
 @font-face {
-    font-family:'FuenteLogin';
+    font-family: 'FuenteLogin';
     src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
 }
+
 @font-face {
-    font-family:'FuenteBoton';
+    font-family: 'FuenteBoton';
     src: url('/views/Fonts/Garet-Book.otf');
 }
+
 @font-face {
-    font-family:'FuenteTexto';
+    font-family: 'FuenteTexto';
     src: url('/views/Fonts/Poppins-Regular.ttf');
 }
+
 /*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
-*{
+* {
     margin: 0;
     padding: 0;
 }
-header{
-    background-color: black;
+
+.cabecera {
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 70px;
+    height: 50px;
+    padding: 0;
+    z-index: 1000;
 }
-main{
+
+.cabecera img {
+    width: 20%;
+    height: 90px;
+    /* Ajusta un máximo para pantallas pequeñas */
+    transition: all 0.3s ease-in-out;
+    /* Animación suave para cambios de tamaño */
+    margin-left: 40%;
+    /* Centra la imagen en la cabecera */
+
+}
+
+.cabecera nav {
+    background-color: black;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+}
+
+.cabecera ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
     display: flex;
 }
-.divPersonas{
-    width: 50%;
-    padding-top: 70px;
-    padding-left: 100px;
+
+.cabecera li {
+    margin-right: 20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
 }
-.sectionPersonas{
+
+.cabecera a {
+    color: #b42525;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'FuentePrincipal';
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.elementos::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.6s ease-in-out, border-color 0.6s ease-in-out;
+    z-index: -1;
+}
+
+.elementos:hover::before {
+    border-color: red;
+    transform: rotate(360deg);
+}
+
+.cabecera li:hover a {
+    color: red;
+    /* Cambiar color del texto en hover */
+}
+
+.nav-Derecha {
+    margin-left: auto;
+}
+
+.destacado {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+}
+
+.divPersonas {
+    width: 50%;
+    padding-top: 140px;
+    padding-left: 50px;
+}
+
+.sectionPersonas {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    
+    padding-top: 130px;
+
 }
-form{
+
+form {
     border: solid black 2px;
     width: 60%;
     height: 430px;
     display: flex;
     flex-direction: column;
 }
-label{
+
+label {
     margin-top: 4px;
     border-radius: 5%;
 }
-input{
+
+input {
     width: 90%;
     margin-left: 5px;
-   
+
 }
-p{
+
+p {
     font-family: 'FuenteTexto';
     margin-top: 7px;
-   margin-left: 15px;
+    margin-left: 70px;
 }
-h1{
+
+.p_form {
+    margin-left: 6px;
+}
+
+h1 {
     font-family: 'FuenteTexto';
     color: #b42525;
+    margin-left: 130px;
 }
-h2{
+
+h2 {
     font-family: 'FuenteTexto';
     color: #b42525;
+    margin-left: 160px;
 }
-.PUno{
+
+.PUno {
     font-family: 'FuenteTexto';
     margin-left: 0;
 }
-button{
-    font-family:'FuenteBoton';
+
+button {
+    font-family: 'FuenteBoton';
     background-color: #b42525;
     color: #e4c15c;
     width: 50%;
@@ -83,36 +183,37 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    margin-left: 125px;
+    margin-top: 50px;
+    margin-left: 95px;
     border: currentColor;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: #ff0000;
     transition: ease-in 0.8s;
     transform: scale(1.2);
 }
 
-footer{
+footer {
     background-color: black;
     width: 100%;
     height: 70px;
     position: absolute;
     bottom: 0px;
 }
-img{
+
+img {
     width: 500px;
     height: 270px;
     margin-top: 30px;
     margin-left: 40px;
 }
 
-.correcto{
+.correcto {
     outline: solid 2px green;
-  }
+}
 
-  .incorrecto{
+.incorrecto {
     outline: solid 2px red;
-  }
+}

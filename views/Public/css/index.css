@@ -1,53 +1,60 @@
-@font-face{
-    font-family:'LetraPrincipal';
+@font-face {
+    font-family: 'LetraPrincipal';
     src: url('/views/Fonts/LetraPrincipal.otf');
 }
+
 @font-face {
-    font-family:'FuenteLogin';
+    font-family: 'FuenteLogin';
     src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
 }
+
 @font-face {
-    font-family:'FuenteBoton';
+    font-family: 'FuenteBoton';
     src: url('/views/Fonts/Garet-Book.otf');
 }
+
 @font-face {
-    font-family:'FuenteTexto';
+    font-family: 'FuenteTexto';
     src: url('/views/Fonts/Poppins-Regular.ttf');
 }
+
 /*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
 }
 
 /*Menu de navegacion*/
 
-.cabecera img{   
-  width:20%;
-  height:90px;
-  transition: all 0.3s ease-in-out; 
-  margin-left: 40%; 
+.cabecera img {
+    width: 20%;
+    height: 90px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 40%;
 }
-.cabecera nav{
-   background-color:#293737;
-   padding: 10px;
-   position: sticky;
-   top: 0px;
+
+.cabecera nav {
+    background-color: #293737;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
 }
-.cabecera ul{
+
+.cabecera ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
     display: flex;
 }
-.cabecera li{
+
+.cabecera li {
     margin-right: 20px;
     padding: 20px;
     border: none;
@@ -55,16 +62,18 @@ body{
     cursor: pointer;
 
 }
-.cabecera a{
+
+.cabecera a {
     color: #b42525;
     text-decoration: none;
     margin-left: 20px;
-    font-family:'FuentePrincipal';
+    font-family: 'FuentePrincipal';
     font-size: 18px;
     font-weight: 700;
     text-align: center;
 
 }
+
 .elementos::before {
     content: '';
     width: 100%;
@@ -74,61 +83,72 @@ body{
     transition: transform 0.6s ease-in-out, border-color 0.6s ease-in-out;
     z-index: -1;
 }
+
 .elementos:hover::before {
-    border-color: red; 
-    transform: rotate(360deg); 
+    border-color: red;
+    transform: rotate(360deg);
 }
+
 .cabecera li:hover a {
-    color: red; /* Cambiar color del texto en hover */
+    color: red;
+    /* Cambiar color del texto en hover */
 }
-.nav-Derecha{
+
+.nav-Derecha {
     margin-left: auto;
 }
-.destacado{
+
+.destacado {
     font-weight: bold;
 }
 
 /* bloque 1 */
 
-.contenidoCentral{
-  display:inline;
-  
+.contenidoCentral {
+    display: inline;
+
 }
-.info{
+
+.info {
     height: 1000px;
     width: 100%;
     display: inline;
     position: absolute;
     top: 20%;
 }
-.contImg img{
-    width:30%;
-    position:relative;
+
+.contImg img {
+    width: 30%;
+    position: relative;
     top: -220px;
-    left:80px;
+    left: 80px;
     z-index: -1;
 }
-.info{
+
+.info {
     display: inline;
-    position:relative;
+    position: relative;
     left: 45%;
 }
-.info h2{
+
+.info h2 {
     font-family: 'FuenteLogin';
     color: #b42525;
     font-size: 40px;
 }
-.info p{
+
+.info p {
     text-align: justify;
     font-size: 22px;
     width: 700px;
     margin: 50px 50px 50px 0;
 }
-.info button{
+
+.info button {
     padding: 20px 50px;
     font-size: 18px;
     font-weight: bold;
-    color:#e4c15c;
+    color: #e4c15c;
     background: linear-gradient(90deg, #ad1010 50%, #ff0303 50%);
     background-size: 200%;
     background-position: 0%;
@@ -138,58 +158,65 @@ body{
     transition: background-position 0.5s ease-in-out;
     outline: none;
 }
-.info button:hover{
-     background-position: 100%;
-     color: yellow;
+
+.info button:hover {
+    background-position: 100%;
+    color: yellow;
 }
-.info a{
+
+.info a {
     text-decoration: none;
     color: #e4c15c;
 }
-.info a:hover{
+
+.info a:hover {
     color: yellow;
 }
 
 /* bloque 2 */
 
-.infoPrestamos{
+.infoPrestamos {
     background: linear-gradient(red 60%, gold);
     width: 100%;
     height: 800px;
     position: absolute;
     top: 800px;
 }
-.infoPrestamos h3{
+
+.infoPrestamos h3 {
     padding: 5%;
     font-family: 'FuenteLogin';
-    background: linear-gradient(Gold  40%, white  50%);
+    background: linear-gradient(Gold 40%, white 50%);
     -webkit-background-clip: text;
     color: transparent;
-    font-size:40px;
+    font-size: 40px;
 }
-.infoPrestamos li{
+
+.infoPrestamos li {
     width: 70%;
-    margin-top:20px;
-    margin-left:70px;
+    margin-top: 20px;
+    margin-left: 70px;
     font-size: 22px;
     font-family: 'FuenteTexto';
     color: white;
 }
-.infoPrestamos ol{
+
+.infoPrestamos ol {
     position: absolute;
     top: 30%;
 }
-.infoPrestamos img{
+
+.infoPrestamos img {
     width: 30%;
     height: 70%;
     position: relative;
     left: 65%;
-    top:-35px;
+    top: -35px;
 }
 
 /* bloque 3 */
 
-.preguntasFrecuentes{
+.preguntasFrecuentes {
     width: 100%;
     height: 250px;
     position: relative;
@@ -199,9 +226,9 @@ body{
 }
 
 section h1 {
-    font-size:40px;
+    font-size: 40px;
     font-weight: 700;
-    color:#293737;
+    color: #293737;
 }
 
 .faq-Container {
@@ -240,7 +267,7 @@ section h1 {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     color: #ff0000;
-    font-size:22px;
+    font-size: 22px;
 }
 
 .faq-Item.active .faq-answer {
@@ -254,55 +281,58 @@ section h1 {
 
 /* bloque 4 */
 
-.sobreN{
+.sobreN {
     font-family: 'FuenteTexto';
     font-size: 14px;
     width: 100%;
     height: 500px;
-    background:linear-gradient(red 60%, gold);
+    background: linear-gradient(red 60%, gold);
     display: flex;
     position: relative;
     top: 800px;
     justify-content: center;
     align-items: center;
-    
+
 }
-.mainSobreN{
+
+.mainSobreN {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cabezaSobreN{
+
+.cabezaSobreN {
     background-color: black;
     width: 100%;
     height: 100px;
 }
+
 .section-ItemSobreN {
     width: 30%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-  }
+}
 
-  .section-ItemSobreN h2{
+.section-ItemSobreN h2 {
     font-size: 22px;
     font-weight: 700;
-  }
+}
 
-  .section-ItemSobreN p{
+.section-ItemSobreN p {
     font-size: 22px;
-  }
-  
-  .section-ItemSobreN img {
+}
+
+.section-ItemSobreN img {
     height: 130px;
     width: 200px;
-  }
- 
-  
-  .section-ItemSobreN button {
+}
+
+
+.section-ItemSobreN button {
     border: currentColor;
     background-color: #293737;
     border-radius: 40px;
@@ -314,53 +344,58 @@ section h1 {
     width: 200px;
     font-family: 'FuenteTexto';
     font-size: 18px;
-  }
-  .section-ItemSobreN button:hover{
+}
+
+.section-ItemSobreN button:hover {
     background-color: red;
     transition: ease 0.45s;
     color: gold;
-  }
-  .section-ItemSobreN a{
+}
+
+.section-ItemSobreN a {
     text-decoration: none;
-    color:rgb(255, 255, 255);
-  }
- .tarjeta {
-        position: absolute;
-        left: -18%;
-        width: 200px;
-        height: 200px;
-        background-color: white;
-        text-align: center;
-        position: relative;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin-left: 10%;
-        margin-left: 100px;
-    }
-.tarjeta img{
+    color: rgb(255, 255, 255);
+}
+
+.tarjeta {
+    position: absolute;
+    left: -18%;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10%;
+    margin-left: 100px;
+}
+
+.tarjeta img {
     width: 100%;
     height: 100%;
-  
+
 }
 
 /* Pie de pagina */
 
-footer{
+footer {
     width: 100%;
     height: 200px;
     position: relative;
     top: 800px;
 }
 
-.divRedes{
+.divRedes {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
     margin-left: 100px;
 }
-.divRedes img{
-    background:linear-gradient(red 80%,gold);
+
+.divRedes img {
+    background: linear-gradient(red 80%, gold);
     border-radius: 20px;
     padding: 10px;
     width: 10%;
