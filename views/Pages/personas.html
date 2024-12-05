@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personas</title>
-    <link rel="stylesheet" href="/views/CSS/personas.css">
+    <link rel="stylesheet" href="/views/Public/css/personas.css">
 </head>
 <body>
     <header>
@@ -14,26 +14,34 @@
     <h1>Préstamos Personales</h1>
     <h2>Préstamos de Consumo</h2>
     <p class="pUno">Prestamos de corto y mediano plazo, para pequeñas cantidades de dinero.</p>
-    <img src="/views/IMG/Personas/personas.jpg" alt="Imagen de Persona" >
+    <img src="/views/Public/img/personas.jpg" alt="Imagen de Persona" >
     </div>
     <section class="sectionPersonas">
         <form action="">
             <p>Nombre</p>
-            <label for="nombre"><input type="text" placeholder="Ingrese su Nombre"></label>
+            <label for="">
+                <input name="nombre" id="nombre" placeholder="Ingrese su Nombre"></label>
             <p>Número De identificación</p>
-            <label for="identificación"><input type="number" placeholder="Identificación"></label>
+            <label for="">
+                <input name="identificacion" id="identificacion" placeholder="Identificación"></label>
             <p>Correo Electrónico</p>
-            <label for="correo"><input type="email" placeholder="Correo electrónico"></label>
+            <label for="">
+                <input name="correo" id="correo" placeholder="Correo electrónico"></label>
             <p>Número de Celular</p>
-            <label for="celular"><input type="tel" placeholder="Número de Celular"></label>
+            <label for="">
+                <input name="celular" id="celular" placeholder="Número de Celular"></label>
             <p>Motivo del Préstamo</p>
-            <label for="motivo"><input type="text" placeholder="Motivo"></label>
+            <label for="">
+                <input name="motivo" id="motivo" placeholder="Motivo"></label>
             <p>Valor del Préstamo (Max. $300.000)</p>
-            <label for="valor"><input type="number" placeholder="Valor"></label>
-            <button>ENVIAR</button>
+            <label for="">
+                <input name="valor" id="valor" placeholder="Valor"></label>
+            <button id="enviar">ENVIAR</button>
         </form>
     </section>
 </main>
-    <footer></footer>
+    <script type="module" src="/views/Public/JS/scriptPersonas.js"></script>
+    <script type="module" src="/controllers/ControllerPersonas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

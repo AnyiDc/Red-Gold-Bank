@@ -108,3 +108,11 @@ img{
     margin-top: 30px;
     margin-left: 40px;
 }
+
+.correcto{
+    outline: solid 2px green;
+  }
+
+  .incorrecto{
+    outline: solid 2px red;
+  }
