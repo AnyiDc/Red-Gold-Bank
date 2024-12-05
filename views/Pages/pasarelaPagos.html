@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago</title>
+    <link rel="stylesheet" href="/views/Public/css/pasarelaPagos.css">
+</head>
+<body>
+    <img src="/views/Public/img/Logo.png" alt="">
+    <div class="contenedor-pasarela">
+        <h2 class="titulo-seccion">Resumen de Pago</h2>
+        
+        <div class="resumen-pago">
+            <div class="elemento-resumen">
+                <span class="etiqueta-resumen">Número de Referencia:</span> 
+                <span class="elemento-referencia"></span>
+            </div>
+            <div class="elemento-resumen">
+                <span class="etiqueta-resumen">Cédula:</span> 
+                <span class="elemento-cedula"></span>
+            </div>
+            <div class="elemento-resumen">
+                <span class="etiqueta-resumen">Nombre:</span> 
+                <span class="elemento-nombre"></span>
+            </div>
+            <div class="elemento-resumen">
+                <span class="etiqueta-resumen">Total a Pagar:</span> 
+                <span class="elemento-total">COP 4,200.00</span>
+            </div>
+        </div>
+
+        <select class="selector-bancos">
+            <option value="" disabled selected>Seleccione su banco</option>
+            <option value="banco1">Bancolombia</option>
+            <option value="banco2">Davivienda</option>
+            <option value="banco3">Banco de Bogotá</option>
+            <option value="banco4">BBVA Colombia</option>
+            <option value="banco5">Grupo Aval</option>
+            <option value="banco6">Banco Agrario</option>
+            <option value="banco7">Banco Popular</option>
+            <option value="banco8">Caja Social</option>
+        </select>
+
+        <div class="grupo-privacidad">
+            <input type="checkbox" id="aceptar-terminos">
+            <label for="aceptar-terminos">Acepto los términos y condiciones</label>
+        </div>
+
+        <button class="boton-confirmar">Confirmar Pago</button>
+    </div>
+
+    
+
+    <script type="module" src="/controllers/ControllerPasarelaPagos.js">
+        document.addEventListener('DOMContentLoaded', procesarPasarela);
+    </script>
+  
+</body>
+</html>

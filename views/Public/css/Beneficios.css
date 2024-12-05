@@ -1,21 +1,18 @@
 @font-face {
     font-family: 'LetraPrincipal';
-    src: url('/views/Fonts/LetraPrincipal.otf');
+    src: url('../Fonts/LetraPrincipal.otf');
 }
-
 @font-face {
     font-family: 'FuenteLogin';
-    src: url('/views/Fonts/LeagueSpartan-VariableFont_wght.ttf');
+    src: url('../Fonts/LeagueSpartan-VariableFont_wght.ttf');
 }
-
 @font-face {
     font-family: 'FuenteBoton';
-    src: url('/views/Fonts/Garet-Book.otf');
+    src: url('../Fonts/Garet-Book.otf');
 }
-
 @font-face {
     font-family: 'FuenteTexto';
-    src: url('/views/Fonts/Poppins-Regular.ttf');
+    src: url('../Fonts/Poppins-Regular.ttf');
 }
 
 /*Se insertan y se nombran todas las fuentes necesarias para el diseño*/
@@ -114,31 +111,29 @@ main {
 }
 
 section {
-    width: 60%;
-
+    width: 80%;
 }
 
 h1 {
     font-family: 'FuenteTexto';
     color: #b42525;
     width: 80%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 5%;
-    font-size: 35px;
+    font-size: 260%;
 }
 
 p {
     font-family: 'FuenteTexto';
     color: black;
     width: 85%;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 5%;
-    font-size: 30px;
+    font-size: 250%;
 }
 
 div {
     width: 40%;
-
 }
 
 img {
